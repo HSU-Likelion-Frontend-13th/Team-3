@@ -4,8 +4,8 @@ body{
 }
 .top{
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
+    flex-direction: row; /*행 가로 방향*/
+    align-items: baseline; /*글자 기준선 맞춰서 정렬*/
     margin-left: 370px;
     margin-right: 1210px;
     color: #4A86FF;
@@ -17,7 +17,7 @@ body{
     flex-direction: row;
     align-items: baseline;
     color: black;
-    
+    gap: 32px;
 }
 .nav h3{
     margin-left: 32px;
@@ -34,6 +34,9 @@ body{
     font-weight: bold;
     text-align: center;
     color: #4A86FF; 
+    margin-top: 0px;
+    padding-top: 20px;
+    font-size: 3rem;
 }
 .about-container{
     display: flex;
@@ -55,7 +58,7 @@ body{
     box-sizing: border-box;
     border-radius:1rem;
     background-color: #FFFFFF;
-    margin-left: 370px;
+    margin-left: 500px;
    
 }
 .name{
@@ -86,8 +89,8 @@ body{
  
 .info-grid{
     display: grid;
-    grid-template-columns: repeat(2, 200px);
-    gap: 40px 60px;
+    grid-template-columns: repeat(2, 200px); /*열2개, 너비 200px*/
+    gap: 90px 60px; /*세로 가로 간격*/
 }
 .info h3{
     font-weight: bold;
@@ -99,6 +102,8 @@ body{
     margin: 4px 0;
     color: #626682;
 }
+
+
 .box{
     display: flex;
     flex-direction: row;
@@ -108,9 +113,11 @@ body{
     gap: 40px;
     flex-wrap: wrap;
     
-    
 }
-
+.hobby{
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
 .hobby-card{
     width: 300px;
     height: 300px;
