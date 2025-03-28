@@ -27,6 +27,7 @@
     
 }
 .main h1{
+    font-weight: bold;
     text-align: center;
     color: #4A86FF; 
 }
@@ -38,15 +39,15 @@
     margin-top: 40px;
 }
 .pr{
-    padding: 220px 444px 220px 443px;
+    padding: 200px 444px 200px 443px;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .profile-card{
     width: 380px;
-    height: 498px;
+    height: 400px;
     box-sizing: border-box;
     border-radius:1rem;
     background-color: #FFFFFF;
@@ -55,7 +56,7 @@
 }
 .name{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .profile-img img{
@@ -90,8 +91,57 @@
 }
 .info p{
     text-align: left;
+    font-weight: bold;
     margin: 4px 0;
+    color: #626682;
 }
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    
+    
+}
+
+.hobby-card{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+}
+
+.title{
+    width: 300px;
+    height: 50px;
+    box-sizing: border-box;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: #4A86FF;
+    padding-top: 15px;
+}
+.hobby-img-box{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.himage{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
 
   
  
