@@ -1,3 +1,7 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
 .top{
     display: flex;
     flex-direction: row;
@@ -117,6 +121,7 @@
     border-radius: 12px;
     border-radius: 12px;
     background-color: #FFFFFF;
+    margin-bottom: 100px;
 }
 
 .title{
@@ -126,6 +131,8 @@
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     background-color: #4A86FF;
+    color: white;
+    font-weight: bold;
     padding-top: 15px;
 }
 .hobby-img-box{
