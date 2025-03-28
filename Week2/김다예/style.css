@@ -1,0 +1,96 @@
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-left: 370px;
+    margin-right: 1210px;
+    color: #4A86FF;
+    background-size: auto 100%
+}
+.nav{
+    margin-left: 328px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    color: black;
+    
+}
+h3{
+    margin-left: 32px;
+}
+
+.content{
+    background-color: #4A86FF;
+}
+.main{
+    background-color: #F3F5FF;
+    
+}
+.main h1{
+    text-align: center;
+    color: #4A86FF; 
+}
+.about-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 40px;
+}
+.pr{
+    padding: 220px 444px 220px 443px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.profile-card{
+    width: 380px;
+    height: 498px;
+    
+    box-sizing: border-box;
+    border-radius:1rem;
+    background-color: #FFFFFF;
+    margin-left: 10em;
+   
+}
+.name{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.profile-img img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    
+}
+.contact-info{
+    display: block;
+    margin-left: 30px;
+}
+.contact-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 6px 0;
+  }
+ 
+.info-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 40px 60px;
+}
+.info h3{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.info p{
+    text-align: left;
+    margin: 4px 0;
+}
+
+  
+ 
