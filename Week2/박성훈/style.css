@@ -2,7 +2,11 @@ html{
   font-size:10px;
 
 }
+body{
 
+  background-color: #F3F5FF;
+  margin: 0;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -18,13 +22,26 @@ html{
 }
 
 .nav a {
-  margin-left: 24px;
+  margin-left: 1.5em;
   text-decoration: none; /* 기본 밑줄 제거 */
   color: black;
-  font-size: 14px;
+  font-size: 1.2em;
   font-weight: 500;
 }
 
 .nav a:hover {
   text-decoration: underline;
+}
+.bodyInnerText{
+  display: flex;
+  flex-direction: column; /* 수직 방향으로 정렬 */
+  justify-content: center; /* 수직 가운데 정렬 */
+  align-items: center;     /* 수평 가운데 정렬 */
+  text-align: center; /*문자 가운데 정렬 */
+  background-color: #4A86FF;
+  color:white;
+  padding-top:3em;
+  padding-bottom: 3em;
+  font-size:2.5em;
+  width:100%;
 }
