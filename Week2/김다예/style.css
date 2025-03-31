@@ -12,7 +12,7 @@ body{
     background-size: auto 100%
 }
 .nav{
-    margin-left: 328px;
+    margin-left: 20.5rem; /*328px*/
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -43,7 +43,7 @@ body{
     flex-direction: row;
     align-items: flex-start;
     gap: 60px;
-    margin-top: 40px;
+    margin-top: 2.5rem; /*40px*/
 }
 .pr{
     padding: 200px 444px 200px 443px;
@@ -80,7 +80,7 @@ body{
 }
 .contact-info{
     display: block;
-    margin-left: 30px;
+    margin-left: 1.8rem; /*30px*/
    
 }
 .contact-info p {
@@ -118,8 +118,8 @@ body{
     
 }
 .hobby{
-    padding-top: 100px;
-    padding-bottom: 40px;
+    padding-top: 6.25rem; /*100px*/
+    padding-bottom: 2.5rem; /*40px*/
 }
 .hobby-card{
     width: 300px;
