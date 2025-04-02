@@ -1,6 +1,27 @@
 .div{
             background-color: skyblue;
-            padding: 200px;
-            margin:30px;
-            width: 400px;
+            color:white;
+            text-align: center; /*가운데 정렬*/
+            padding: 100px;
+            font-size: 1.3rem;
+            
         }
+
+.upside{
+    display: flex;
+    flex-direction: row; /*행 가로 방향*/
+    color: skyblue;
+    margin: 0.5rem;
+}
+.nav{
+    margin-left: 20rem; 
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    color: black;
+    gap: 25px;
+}
+
+.nav>h1{
+
+}
