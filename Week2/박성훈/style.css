@@ -11,7 +11,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 1em;
 }
 
 .logo {
@@ -117,4 +117,37 @@ body{
   font-size: 1.4em;
   line-height: 1.5;
   color: #626682;
+}
+
+.hobby {
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+  gap: 1em; /* 카드 사이 간격 */
+  text-align: center;
+  padding:1em;
+  padding-bottom: 10em;
+}
+
+.hobby-card{
+  background-color: white;
+  text-align: center;/*가운데 정렬*/
+  border-radius: 1.5em;
+  width: 20em;
+  height: 23em;
+}
+.hobby-info{
+  background-color: #4A86FF;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  color: white;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 0.8em;
+}
+.hobby-img{
+  width: 18em;
+  height: 14em;
+  border-radius: 0.5em;
+  object-fit: cover;/* 이미지 비율을 유지하며 잘라냄 */
+  margin-top: 2em;
 }
