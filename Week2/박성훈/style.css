@@ -131,7 +131,7 @@ body{
 .hobby-card{
   background-color: white;
   text-align: center;/*가운데 정렬*/
-  border-radius: 1.5em;
+  border-radius: 3em;
   width: 20em;
   height: 23em;
 }
