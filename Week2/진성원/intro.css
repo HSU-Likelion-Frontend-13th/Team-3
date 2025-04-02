@@ -63,3 +63,37 @@ nav a{
     font-weight: bold;
 }
 
+.hobby_title{
+    text-align: center;
+    color:skyblue;
+    font-size: 1.7rem;
+
+}
+
+.hobby_list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /*가로로 3개 나열*/
+    gap: 2rem;
+    padding: 2rem;
+    justify-items: center;
+   
+
+}
+
+.hobby_item{
+    width: 180px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.hobby_item img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hobby_item p {
+    background-color: skyblue;
+    color: white;
+
+}
