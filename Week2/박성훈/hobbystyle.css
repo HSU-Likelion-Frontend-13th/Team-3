@@ -1,0 +1,63 @@
+.hobby-container {
+  display: flex;
+  flex-direction: column;/*세로로 정렬*/
+  gap: 3em;
+  padding: 2em;
+}
+
+.hobby-row {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  opacity: 0;/*첫 화면에서 안보이게 하기 위해서*/
+  transform: translateX(-100%);
+  animation: slideIn 3s ease forwards;
+}
+
+.hobby-row:nth-child(1) { animation-delay: 0s; }
+.hobby-row:nth-child(2) { animation-delay: 4s; }
+.hobby-row:nth-child(3) { animation-delay: 8s; }
+/*애니메이션 동작 정의*/
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hobby-card{
+  background-color: white;
+  text-align: center;/*가운데 정렬*/
+  border-radius: 3em;
+  width: 20em;
+  height: 23em;
+}
+
+.hobby-info{
+  background-color: #4A86FF;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  /*위쪽만 궁글게*/
+  color: white;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 0.8em;
+}
+
+.hobby-img{
+  width: 18em;
+  height: 14em;
+  border-radius: 0.5em;
+  object-fit: cover;/* 이미지 비율을 유지하며 잘라냄 */
+  margin-top: 2em;
+}
+
+.hobby-desc-card {
+  background-color: white;
+  padding: 2em;
+  border-radius: 1em;
+  width: 25em;
+  height: 10em;
+  font-size: 1.5em;
+  color: gray;
+}
