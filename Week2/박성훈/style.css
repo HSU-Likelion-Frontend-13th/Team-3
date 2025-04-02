@@ -91,27 +91,30 @@ body{
 
 .profile-info {
   font-size: 1.4em;
-  color: #555;
-  text-align: left;
-  margin-bottom: 0.5em;
+  color: #484A64;
+  text-align: left;/*좌측 정렬*/
+  margin-bottom: 0.5em;/*0.5em씩 띄우기*/
 }
 .profile-infoimg{
-  font-size: 1.6em;
+  font-size: 1.6em;/*이미지는 조금 더 크게*/
 }
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(180px, 1fr));
-  gap: 2em;
+  /*grid 레이아웃 2행2열의 고정된 영역을 사용하므로*/
+  grid-template-columns: repeat(2, minmax(10em, 1fr));
+  /*2열을 만들고 각열은 최소 10em, 최대 화면 전체체 */
+  gap: 4em;
+  /*열과 행 사이 간격*/
 }
 
 .info-block h3 {
   margin-bottom: 0.5em;
   font-size: 1.8em;
-  font-weight: bold;
+  font-weight: bold;/*굵게*/
 }
 
 .info-block p {
   font-size: 1.4em;
   line-height: 1.5;
-  color: #333;
+  color: #626682;
 }
