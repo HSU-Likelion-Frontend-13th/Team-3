@@ -2,26 +2,30 @@
             background-color: skyblue;
             color:white;
             text-align: center; /*가운데 정렬*/
-            padding: 100px;
+            padding: 100px; /*상하좌우 100씩 설정*/
             font-size: 1.3rem;
             
         }
 
-.upside{
-    display: flex;
-    flex-direction: row; /*행 가로 방향*/
+
+header{
+    display: flex; /*가로 방향 정렬 */
+    justify-content: space-between; /*동일 간격 배치, 요소에 따라 왼쪽 끝, 오른쪽 끝*/
+    align-items: center;
+    padding: 20px; /*상하좌우 20씩 설정*/
+    background-color: white;
+  
+}
+
+header h1{
     color: skyblue;
-    margin: 0.5rem;
-}
-.nav{
-    margin-left: 20rem; 
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    color: black;
-    gap: 25px;
 }
 
-.nav>h1{
-
+nav a{
+    color:black;
+    text-decoration: none; /*밑줄 없애기*/
+    font-weight: bold;
 }
+
+
+
