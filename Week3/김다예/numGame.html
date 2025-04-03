@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>숫자 맞히기 게임</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+      
+      .form input[type="number"] {
+        width: 200px;
+      }
+
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>숫자 맞히기 게임</h1>
+
+    <p>1에서 100 사이의 무작위 숫자를 선택합니다. 10턴 이내에 맞출 수 있는지 확인해 보세요. 선택한 숫자가 너무 높았는지 너무 낮았는지 알려드리겠습니다.</p>
+
+    <div class="form">
+      <label for="guessField">예측한 숫자: </label>
+      <input type="number" min="1" max="100" required id="guessField" class="guessField">
+      <input type="submit" value="예측한 숫자 제출하기" class="guessSubmit">
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p> 
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+        const guessInput = document.querySelector('.guessField');
+        const guessBtn = document.querySelector('.guessSubmit');
+        const resultParas = document.querySelector('.resultParas');
+        const guesses = document.querySelector('.guesses');
+        const lastResult = document.querySelector('.lastResult');
+        const lowOrHi = document.querySelector('.lowOrHi');
+
+        guessBtn.addEventListener('click', ()=>{
+            const value = guessInput.value;
+            if(!value) return;
+
+            const num = document.createElement("span"); //예측한 숫자들
+            num.className = 'guess-num';
+            num.textContent = value + ' '; // 숫자 출력할 때 한칸 띄우기
+            guesses.appendChild(num);
+        })
+        
+        
+
+    </script>
+  </body>
+</html>
