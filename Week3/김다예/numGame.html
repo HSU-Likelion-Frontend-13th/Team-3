@@ -53,15 +53,62 @@
         const lastResult = document.querySelector('.lastResult');
         const lowOrHi = document.querySelector('.lowOrHi');
 
+        let numbers = [];
+        let answer;
+        let FirstGuess = true;
+
+          //랜덤 함수 
+          function RandomNumber(){
+           for(let i = 0; i<10; i++){
+            let rand = Math.floor(Math.random() * 100) + 1;
+            numbers.push(rand);
+           }
+           answer = numbers[Math.floor(Math.random() * number.length)];
+           console.log(answer);
+
+        }
+
+        function CheckNumber(value){ //value 전달 받아야함
+            if(Number(value) == answer){
+                lastResult.textContent = "축하합니다! 맞췄습니다!";
+            }
+            else{
+                lastResult.textContent = "틀렸습니다!";
+            
+                if(Number(value) > answer){
+                    lowOrHi.textContent = "예측한 값이 큽니다!";
+                }
+                else{
+                    lowOrHi.textContent = "예측한 값이 작습니다!";
+                }
+            }
+        }
+
         guessBtn.addEventListener('click', ()=>{
-            const value = guessInput.value;
+            const value = guessInput.value; 
+            /*input해서 입력한 값을 가져오면 
+            그 값은 무조건 문자열 형태*/
             if(!value) return;
+
+            if(FirstGuess){ //예측한 숫자들-> 한번만 출력하기 위해
+                const label = document.createElement("span");
+                label.textContent = "예측한 숫자들: ";
+                guesses.appendChild(label);
+                FirstGuess = false;
+            }
 
             const num = document.createElement("span"); //예측한 숫자들
             num.className = 'guess-num';
             num.textContent = value + ' '; // 숫자 출력할 때 한칸 띄우기
             guesses.appendChild(num);
+            
+           CheckNumber(Number(value));
         })
+      
+       
+
+
+      
         
         
 
