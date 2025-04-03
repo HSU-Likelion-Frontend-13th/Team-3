@@ -22,7 +22,7 @@
       }
 
       .lastResult {
-        color: white;
+        /* color: rgb(0, 0, 0);*/
         padding: 3px;
       }
     </style>
@@ -61,20 +61,25 @@
           function RandomNumber(){
            for(let i = 0; i<10; i++){
             let rand = Math.floor(Math.random() * 100) + 1;
-            numbers.push(rand);
+            numbers.push(rand); //numbers 배열에 랜덤 숫자 넣음음
            }
-           answer = numbers[Math.floor(Math.random() * number.length)];
+           answer = numbers[Math.floor(Math.random() * numbers.length)];
            console.log(answer);
 
         }
 
         function CheckNumber(value){ //value 전달 받아야함
-            if(Number(value) == answer){
+            if(Number(value) === answer){
                 lastResult.textContent = "축하합니다! 맞췄습니다!";
+                lastResult.style.backgroundColor = 'green';
+                lastResult.style.color = 'white';
+                lowOrHi.textContent = ""; // 정답이면 밑에 비교 문장 필요X
+
             }
             else{
                 lastResult.textContent = "틀렸습니다!";
-            
+                lastResult.style.backgroundColor = 'red';
+
                 if(Number(value) > answer){
                     lowOrHi.textContent = "예측한 값이 큽니다!";
                 }
@@ -94,6 +99,7 @@
                 const label = document.createElement("span");
                 label.textContent = "예측한 숫자들: ";
                 guesses.appendChild(label);
+                RandomNumber(); // 랜덤으로 지정한 한 숫자 한번만 생성
                 FirstGuess = false;
             }
 
