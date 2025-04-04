@@ -57,10 +57,11 @@
         const lastResult=document.querySelector('.lastResult');
         const hint=document.querySelector('.lowOrHi');
         const guesses=document.querySelector('.guesses');
-        const expectNumber = Math.floor(Math.random() * 100) + 1;
 
         const restartBtn=document.querySelector('.restart');
 
+
+        let expectNumber = Math.floor(Math.random() * 100) + 1;
         let guessCount=0;
         let guessesArray = [];
         let isgameOver=false; //게임 끝남 여부 확인
@@ -74,14 +75,14 @@
         function gameOver(message,color){
             lastResult.textContent=message;
             lastResult.style.backgroundColor=color;
-            isgameover=true;
+            isgameOver=true;
             restartBtn.style.display="block"; //다시 표시시
         }
 
 
     submitBtn.addEventListener('click',()=>{
 
-        if(isgameover){
+        if(isgameOver){
             alert("게임이 끝났습니다! 다시 시작해주세요~");
         }
 
@@ -115,7 +116,7 @@
         guessCount=0;
         guessesArray=[];
         expectNumber=Math.floor(Math.random()*100)+1;
-        isGameOver = false; //다시 게임 초기화
+        isgameOver = false; //다시 게임 초기화
         
 
         lastResult.textContent='';
