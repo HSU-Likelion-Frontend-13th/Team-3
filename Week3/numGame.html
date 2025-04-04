@@ -25,6 +25,10 @@
         color: white;
         padding: 3px;
       }
+
+      .restart{
+        display: none;
+      }
     </style>
   </head>
 
@@ -40,10 +44,12 @@
     </div>
 
     <div class="resultParas">
-      <p class="guesses"></p>
+      <p class="guesses">예측한 숫자들:</p>
       <p class="lastResult"></p>
       <p class="lowOrHi"></p>
     </div>
+
+    <button class="restart">다시 시작</button>
 
     <script>
         const input=document.querySelector('#guessField');
@@ -53,24 +59,49 @@
         const guesses=document.querySelector('.guesses');
         const expectNumber = Math.floor(Math.random() * 100) + 1;
 
+        const restartBtn=document.querySelector('.restart');
+
         let guessCount=0;
-        function updateCount(){
-            guessCount++;
-            
-            guesses.textContent=`총 ${guessCount}번의 도전을 하였습니다.`;
-            
+        let guessesArray = [];
+        let isgameOver=false; //게임 끝남 여부 확인
+    
+
+        function updateGuesses() {
+            guesses.textContent = `예측한 숫자들: ` + guessesArray.join(' '); //공백으로 구분하는 join
         }
 
+
+        function gameOver(message,color){
+            lastResult.textContent=message;
+            lastResult.style.backgroundColor=color;
+            isgameover=true;
+            restartBtn.style.display="block"; //다시 표시시
+        }
+
+
     submitBtn.addEventListener('click',()=>{
+
+        if(isgameover){
+            alert("게임이 끝났습니다! 다시 시작해주세요~");
+        }
+
         const value=Number(input.value); //Number 로 숫자형 만들기
+
+        guessesArray.push(value); 
+        updateGuesses();
+       guessCount++;
+        
         if(value===expectNumber){
-            lastResult.textContent="축하합니다!맞췄습니다!";
-            lastResult.style.backgroundColor="green";
-            updateCount();
-        }else{
+            gameOver("축하합니다! 맞췄습니다!","green");
+        }else if(guessCount===10){
+            gameOver("정답은 "+expectNumber + "였습니다");
+            
+        }
+        
+        else{
             lastResult.textContent="틀렸습니다!";
             lastResult.style.backgroundColor="red";
-            updateCount();
+            
 
             if(expectNumber>value){
                 hint.textContent="예측한 값이 작습니다!";
@@ -78,6 +109,20 @@
                 hint.textContent="예측한 값이 큽니다!";
             }
         }
+    })
+
+    restartBtn.addEventListener('click',()=>{
+        guessCount=0;
+        guessesArray=[];
+        expectNumber=Math.floor(Math.random()*100)+1;
+        isGameOver = false; //다시 게임 초기화
+        
+
+        lastResult.textContent='';
+        lastResult.style.backgroundColor='';
+        hint.textContent='';
+        guesses.textContent='예측한 숫자들: ';
+        restartBtn.style.display = "none"; //다시 시작 버튼 다시 숨김
     })
 
       // [과제] js 코드를 작성해주세요!
