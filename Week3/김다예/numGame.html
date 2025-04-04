@@ -79,7 +79,12 @@
                 restartBtn.textContent= "새 게임 시작하기";
                 lowOrHi.appendChild(restartBtn);
                 
-                
+                restartBtn.addEventListener('click', ()=>{
+                    guessInput.value = '';  //입력창 초기화
+                    guessInput.focus(); // 포커스 이동
+                    
+
+                })
 
 
 
