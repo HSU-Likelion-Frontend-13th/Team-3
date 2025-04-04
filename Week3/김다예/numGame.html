@@ -80,13 +80,9 @@
                 lowOrHi.appendChild(restartBtn);
                 
                 restartBtn.addEventListener('click', ()=>{
-                    guessInput.value = '';  //입력창 초기화
-                    guessInput.focus(); // 포커스 이동
-
-                    resultParas.textContent = "";
+                    resetGame();
 
                 })
-
 
 
             }
@@ -101,6 +97,32 @@
                     lowOrHi.textContent = "예측한 값이 작습니다!";
                 }
             }
+        }
+
+        function resetGame(){
+           // 랜덤 숫자 새로 만들기
+           numbers = []; //기존 배열 초기화
+           RandomNumber();
+
+           FirstGuess = true;
+
+           // 게임 상태 초기화
+           guessInput.value = '';  //입력창 초기화
+           guessInput.focus(); // 포커스 이동
+          
+           // 출력 초기화
+           guesses.textContent = '';
+           lastResult.textContent = '';
+           resultParas.textContent = '';
+           lastResult.style.backgroundColor = 'white';
+           lastResult.style.color = 'black';
+
+           // 새 게임 시작하기 버튼 제거
+           const restartBtn = document.querySelector('button');
+           if(restartBtn){
+            restartBtn.remove();
+           }
+            
         }
 
         guessBtn.addEventListener('click', ()=>{
@@ -126,10 +148,10 @@
 
     
         })
-      
+    
        
 
-
+   
       
         
         
