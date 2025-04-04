@@ -52,9 +52,12 @@
         const expectNumber = Math.floor(Math.random() * 100) + 1;
 
     submitBtn.addEventListener('click',()=>{
-        const value=input.value; //입력되면 value 라는 값으로 저장
-        if(value!=expectNumber){
-            console.log("틀렸습니다!");
+        const value=Number(input.value); //Number 로 숫자형 만들기
+        if(value===expectNumber){
+            checkNumber.textContent="축하합니다!맞췄습니다!";
+
+        }else{
+            checkNumber.textContent="틀렸습니다!";
         }
     })
 
