@@ -50,12 +50,15 @@
         const submitBtn=document.querySelector('.guessSubmit');
         const lastResult=document.querySelector('.lastResult');
         const hint=document.querySelector('.lowOrHi');
-        const guesses=document.querySelector('#guesses');
+        const guesses=document.querySelector('.guesses');
         const expectNumber = Math.floor(Math.random() * 100) + 1;
 
+        let guessCount=0;
         function updateCount(){
-            const guesses=document.querySelectorAll('.guesses');
-            guesses.textContent=`총 ${guesses.length}번의 도전을 하였습니다.`;
+            guessCount++;
+            
+            guesses.textContent=`총 ${guessCount}번의 도전을 하였습니다.`;
+            
         }
 
     submitBtn.addEventListener('click',()=>{
@@ -63,10 +66,11 @@
         if(value===expectNumber){
             lastResult.textContent="축하합니다!맞췄습니다!";
             lastResult.style.backgroundColor="green";
-
+            updateCount();
         }else{
             lastResult.textContent="틀렸습니다!";
             lastResult.style.backgroundColor="red";
+            updateCount();
 
             if(expectNumber>value){
                 hint.textContent="예측한 값이 작습니다!";
@@ -77,7 +81,8 @@
     })
 
       // [과제] js 코드를 작성해주세요!
-
+      
+    
 
     </script>
   </body>
