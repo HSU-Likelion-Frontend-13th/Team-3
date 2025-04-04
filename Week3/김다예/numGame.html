@@ -61,7 +61,7 @@
           function RandomNumber(){
            for(let i = 0; i<10; i++){
             let rand = Math.floor(Math.random() * 100) + 1;
-            numbers.push(rand); //numbers 배열에 랜덤 숫자 넣음음
+            numbers.push(rand); //numbers 배열에 랜덤 숫자 넣음
            }
            answer = numbers[Math.floor(Math.random() * numbers.length)];
            console.log(answer);
@@ -74,6 +74,14 @@
                 lastResult.style.backgroundColor = 'green';
                 lastResult.style.color = 'white';
                 lowOrHi.textContent = ""; // 정답이면 밑에 비교 문장 필요X
+                
+                const restartBtn = document.createElement('button');
+                restartBtn.textContent= "새 게임 시작하기";
+                lowOrHi.appendChild(restartBtn);
+                
+                
+
+
 
             }
             else{
@@ -110,8 +118,7 @@
             
            CheckNumber(Number(value));
 
-           const restartBtn = document.createElement('button');
-           restartBtn.textContent = '새 게임 시작하기';
+    
         })
       
        
