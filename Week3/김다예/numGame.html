@@ -93,8 +93,8 @@
                 lastResult.style.color = 'white';
                 lowOrHi.textContent = "";
                 
-                guessInput.disabled = true;
-                guessBtn.disabled = true;
+                guessInput.disabled = true; //guessInpt 비활성화
+                guessBtn.disabled = true; //guessBtn 비활성화
 
                 const restartBtn = document.createElement('button');
                 restartBtn.textContent = "새 게임 시작하기";
@@ -132,8 +132,8 @@
            // 게임 상태 초기화
            guessInput.value = ''; //입력창 초기화
            guessInput.focus(); // 포커스 이동
-           guessInput.disabled = false;
-           guessBtn.disabled = false;
+           guessInput.disabled = false; //guessInput 활성화
+           guessBtn.disabled = false; //guessBtn 활성화화
           
            // 출력 초기화
            guesses.textContent = '';
