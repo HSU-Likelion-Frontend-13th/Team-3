@@ -46,18 +46,33 @@
     </div>
 
     <script>
-        const input=document.querySelector('#input');
-        const submitBtn=document.querySelector('#submit-Btn');
-        const checkNumber=document.querySelector('#check-number');
+        const input=document.querySelector('#guessField');
+        const submitBtn=document.querySelector('.guessSubmit');
+        const lastResult=document.querySelector('.lastResult');
+        const hint=document.querySelector('.lowOrHi');
+        const guesses=document.querySelector('#guesses');
         const expectNumber = Math.floor(Math.random() * 100) + 1;
+
+        function updateCount(){
+            const guesses=document.querySelectorAll('.guesses');
+            guesses.textContent=`총 ${guesses.length}번의 도전을 하였습니다.`;
+        }
 
     submitBtn.addEventListener('click',()=>{
         const value=Number(input.value); //Number 로 숫자형 만들기
         if(value===expectNumber){
-            checkNumber.textContent="축하합니다!맞췄습니다!";
+            lastResult.textContent="축하합니다!맞췄습니다!";
+            lastResult.style.backgroundColor="green";
 
         }else{
-            checkNumber.textContent="틀렸습니다!";
+            lastResult.textContent="틀렸습니다!";
+            lastResult.style.backgroundColor="red";
+
+            if(expectNumber>value){
+                hint.textContent="예측한 값이 작습니다!";
+            }else if(expectNumber<value){
+                hint.textContent="예측한 값이 큽니다!";
+            }
         }
     })
 
