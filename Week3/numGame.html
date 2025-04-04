@@ -94,6 +94,7 @@
         
         if(value===expectNumber){
             gameOver("축하합니다! 맞췄습니다!","green");
+            hint.textContent="";
         }else if(guessCount===10){
             gameOver("정답은 "+expectNumber + "였습니다");
             
