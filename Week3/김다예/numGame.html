@@ -56,6 +56,7 @@
         let numbers = [];
         let answer;
         let FirstGuess = true;
+        let guessCount = 1;
 
           //랜덤 함수 
           function RandomNumber(){
@@ -74,7 +75,8 @@
                 lastResult.style.backgroundColor = 'green';
                 lastResult.style.color = 'white';
                 lowOrHi.textContent = ""; // 정답이면 밑에 비교 문장 필요X
-                
+           
+                //새 게임 버튼 생성
                 const restartBtn = document.createElement('button');
                 restartBtn.textContent= "새 게임 시작하기";
                 lowOrHi.appendChild(restartBtn);
@@ -83,10 +85,30 @@
                     resetGame();
 
                 })
-
-
             }
             else{
+                if(guessCount >= 10){
+                lastResult.textContent = "게임 오버"
+                lastResult.style.backgroundColor = 'black';
+                lastResult.style.color = 'white';
+                lowOrHi.textContent = "";
+                
+                guessInput.disabled = true;
+                guessBtn.disabled = true;
+
+                const restartBtn = document.createElement('button');
+                restartBtn.textContent = "새 게임 시작하기";
+                lowOrHi.appendChild(restartBtn);
+                
+                restartBtn.addEventListener('click', ()=>{
+                    resetGame();
+                })
+                
+                return;
+             }
+
+
+                // 아직 시도 남아있을 때
                 lastResult.textContent = "틀렸습니다!";
                 lastResult.style.backgroundColor = 'red';
 
@@ -100,15 +122,18 @@
         }
 
         function resetGame(){
-           // 랜덤 숫자 새로 만들기
+           //랜덤 숫자 새로 만들기
            numbers = []; //기존 배열 초기화
            RandomNumber();
 
            FirstGuess = true;
+           guessCount = 1; // 시도 기회
 
            // 게임 상태 초기화
-           guessInput.value = '';  //입력창 초기화
+           guessInput.value = ''; //입력창 초기화
            guessInput.focus(); // 포커스 이동
+           guessInput.disabled = false;
+           guessBtn.disabled = false;
           
            // 출력 초기화
            guesses.textContent = '';
@@ -144,7 +169,7 @@
             guesses.appendChild(num);
             
            CheckNumber(Number(value));
-
+            guessCount++;
     
         })
     
