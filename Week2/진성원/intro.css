@@ -44,8 +44,8 @@ nav a{
 }
 
 .profile img{
-    width:9rem;
-    height:17rem;
+    width:144px;
+    height:270px;
     border-radius: 50%; /*프로필사진 동그렇게 만들기*/
 
 }
