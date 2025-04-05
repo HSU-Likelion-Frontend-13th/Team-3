@@ -36,6 +36,7 @@ nav a{
     flex-direction: row;
     text-align: left;
     padding: 2rem;
+    justify-content: center;
 }
 
 .profile{
