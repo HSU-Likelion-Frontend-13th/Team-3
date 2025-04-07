@@ -69,7 +69,7 @@
 
         }
 
-        function CheckNumber(value){ //value 전달 받아야함
+        function CheckNumber(value){ // value 전달 받아야함
             if(Number(value) === answer){
                 lastResult.textContent = "축하합니다! 맞췄습니다!";
                 lastResult.style.backgroundColor = 'green';
@@ -93,7 +93,7 @@
                 lastResult.style.color = 'white';
                 lowOrHi.textContent = "";
                 
-                guessInput.disabled = true; //guessInpt 비활성화
+                guessInput.disabled = true; //guessInput 비활성화
                 guessBtn.disabled = true; //guessBtn 비활성화
 
                 const restartBtn = document.createElement('button');
@@ -168,7 +168,8 @@
             num.textContent = value + ' '; // 숫자 출력할 때 한칸 띄우기
             guesses.appendChild(num);
             
-           CheckNumber(Number(value));
+           CheckNumber(Number(value)); // 예측한 숫자가 맞는지 틀리는지 확인하는 함수
+           // Number(value) -> input해서 입력한 값은 문자열이기 때문에 숫자로 변환
             guessCount++;
     
         })
