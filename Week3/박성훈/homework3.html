@@ -60,14 +60,63 @@
       const guesses=document.querySelector('.guesses');
       const lastResult=document.querySelector('.lastResult');
       const lowOrHi=document.querySelector('.lowOrHi');
-      let num=1;
-      let resetButton;
+      let count=1;
+      let resetButton=document.createElement('button');
       //2. 입력받기
-      
       //3. 맞았으면 종료, 틀렸으면 낮으면 낮다고 높으면 높다고 알려줄것.
       //4. 기록 저장
       //5. 10턴 내에 종료해야하므로 반복문으로 감싸기?
-      //6. 반복문 초기화 버튼 만들기(게임 재시작)
+      guessSubmit.addEventListener('click', checkNum);
+      function checkNum(){
+        const userGuess=Number(guessField.value);
+        //이전 입력을 출력하기 위한 userGuess
+
+        if(count===1){
+          guesses.textContent='예측한 숫자들들 : ';
+        }
+
+        guesses.textContent+=userGuess+' ';
+
+        if(userGuess===target){
+          lastResult.textContent="축하합니다! 맞췄습니다!";
+          lastResult.style.backgroundColor='green';
+          lowOrHi.textContent=' ';
+          setGameOver();
+        }
+        else if(count===10){
+          lastResult.textContent='실패했어요 ㅠㅠ';
+          setGameOver();
+        }
+        else{
+          lastResult.textContent="틀렸습니다! ";
+          lastResult.style.backgroundColor='red';
+          if(userGuess<target){
+            lowOrHi.textContent="예측한 값이 큽니다!";
+          }
+          else{
+            lowOrHi.textContent="예측한 값이 작습니다!";
+          }
+        }
+        count++;
+        guessField.value='';
+        guessField.focus();
+
+      }
+
+      //6. 게임 재시작
+      function setGameOver(){
+        resetButton.textContent="다시하기";
+        document.body.appendChild(resetButton);
+        resetButton.addEventListener('click', resetGame);
+      }
+      function resetGame(){
+        count=1;
+        const resetParas = document.querySelectorAll('.resultParas p');
+        resetParas.forEach(props => props.textContent='');
+        lastResult.style.backgroundColor='white';
+
+      }
+
       //7. 스타일 꾸미기
 
     </script>
