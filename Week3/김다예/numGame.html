@@ -55,11 +55,11 @@
 
         let numbers = [];
         let answer;
-        let FirstGuess = true;
+        let firstGuess = true;
         let guessCount = 1;
 
           //랜덤 함수 
-          function RandomNumber(){
+          function randomNumber(){
            for(let i = 0; i<10; i++){
             let rand = Math.floor(Math.random() * 100) + 1;
             numbers.push(rand); //numbers 배열에 랜덤 숫자 넣음
@@ -120,9 +120,9 @@
 
            //랜덤 숫자 새로 만들기
            numbers = []; //기존 배열 초기화
-           RandomNumber();
+           randomNumber();
 
-           FirstGuess = true;
+           firstGuess = true;
            guessCount = 1; // 시도 기회
 
            // 게임 상태 초기화
