@@ -72,11 +72,15 @@
         //이전 입력을 출력하기 위한 userGuess
 
         if(count===1){
-          guesses.textContent='예측한 숫자들들 : ';
+          guesses.textContent='예측한 숫자들 : ';
         }
+        //텍스트로 이어 붙이는 방식
+        //guesses.textContent+=userGuess+' ';
 
-        guesses.textContent+=userGuess+' ';
-
+        const guessSpan=document.createElement('span');
+        guessSpan.textContent=userGuess+' ';
+        guesses.appendChild(guessSpan);
+        //appendChild를 사용한 방식식
         if(userGuess===target){
           lastResult.textContent="축하합니다! 맞췄습니다!";
           lastResult.style.backgroundColor='green';
@@ -105,19 +109,26 @@
 
       //6. 게임 재시작
       function setGameOver(){
-        resetButton.textContent="다시하기";
+        resetButton.textContent="새 게임 시작하기기";
         document.body.appendChild(resetButton);
         resetButton.addEventListener('click', resetGame);
       }
       function resetGame(){
         count=1;
         const resetParas = document.querySelectorAll('.resultParas p');
-        resetParas.forEach(props => props.textContent='');
+        //resetParas.forEach(props => props.textContent='');
+        //텍스트 삭제 방식
+        const guessSpans=document.querySelectorAll('.guesses span');
+        guessSpans.forEach(span => span.remove());
+        //삭제
+        //querySelectorAll에서 
+        //.으로 요소를 추출한 후 테그를 붙이면 
+        // 해당 테그만 추출된다.
         lastResult.style.backgroundColor='white';
-
+        lastResult.textContent = '';
+        lowOrHi.textContent = '';
       }
 
-      //7. 스타일 꾸미기
 
     </script>
   </body>
