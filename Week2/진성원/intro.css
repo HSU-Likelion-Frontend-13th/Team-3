@@ -14,7 +14,7 @@ nav a{
     color: black;
     text-decoration: none; /* 위에 선택바 밑줄 제거*/
     font-weight: bold; /*글씨 진하게 만들기*/
-    margin-left: 2rem; /* 선택바 서로 간격 조절*/
+    margin-left: 32px; /* 선택바 서로 간격 조절*/
 }
 
 .start{
@@ -35,7 +35,7 @@ nav a{
     display: flex;
     flex-direction: row;
     text-align: left;
-    padding: 2rem;
+    padding: 32px;
     justify-content: center;
 }
 
@@ -57,7 +57,7 @@ nav a{
 .information{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-   column-gap: 3.5rem;
+   column-gap: 56px;
 }
 
 .information h3{
