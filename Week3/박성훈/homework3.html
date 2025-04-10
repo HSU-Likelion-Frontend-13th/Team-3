@@ -94,7 +94,7 @@
         else{
           lastResult.textContent="틀렸습니다! ";
           lastResult.style.backgroundColor='red';
-          if(userGuess<target){
+          if(userGuess>target){
             lowOrHi.textContent="예측한 값이 큽니다!";
           }
           else{
@@ -109,6 +109,9 @@
 
       //6. 게임 재시작
       function setGameOver(){
+        guessField.disabled = true;
+        guessSubmit.disabled = true;
+        //입력 막기
         resetButton.textContent="새 게임 시작하기기";
         document.body.appendChild(resetButton);
         resetButton.addEventListener('click', resetGame);
