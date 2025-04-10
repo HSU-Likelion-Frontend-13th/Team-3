@@ -72,12 +72,14 @@
         }
 
 
-        function gameOver(message,color){
-            lastResult.textContent=message;
-            lastResult.style.backgroundColor=color;
-            isgameOver=true;
-            restartBtn.style.display="block"; //다시 표시시
-        }
+        function gameOver(message, color) {
+    lastResult.textContent = message;
+    lastResult.style.backgroundColor = color;
+    isgameOver = true;
+    restartBtn.style.display = "block";
+    submitBtn.disabled = true;
+    input.disabled = true;
+}
 
 
     submitBtn.addEventListener('click',()=>{
@@ -125,6 +127,9 @@
         hint.textContent='';
         guesses.textContent='예측한 숫자들: ';
         restartBtn.style.display = "none"; //다시 시작 버튼 다시 숨김
+
+        input.disabled=false; 
+        submitBtn.disabled=false; // 다시 시작 누르면 다시 입력할 수 있게
     })
 
       // [과제] js 코드를 작성해주세요!
