@@ -1,0 +1,198 @@
+body{
+    margin: 0px;
+    padding: 0px;
+
+    /* 전체 너비를 100vw로 두면 나머지 요소들의 너비를 맞추기 쉬워져요! */
+    width: 100vw; 
+}
+.top{
+    display: flex;
+    flex-direction: row; /*행 가로 방향*/
+    align-items: baseline; /*글자 기준선 맞춰서 정렬*/
+
+    /* top 내부에 있는 요소의 여백이니 margin보다는 padding이 어떨까요? */
+    /* margin-left: 370px;
+    margin-right: 1210px; */
+    padding: 0 20vw;
+
+    color: #4A86FF;
+
+    /* 전체 너비를 100vw로 두었으니 이 부분은 필요 없겠죠? */
+    /* background-size: auto 100%; */
+}
+.nav{
+    margin-left: 20.5vw; /*328px*/
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    color: black;
+    gap: 32px;
+}
+.nav h3{
+    margin-left: 32px;
+}
+
+.content{
+    background-color: #4A86FF;
+
+    /* pr을 감싸고 있는 content(컨테이너)에 가운데 정렬 요소를 두면 pr에서 패딩을 세부적으로 설정할 필요가 없어져요!
+        아래 pr을 참고해주세요!
+    */
+    display: flex;
+    flex-direction: row; /*세로 방향*/
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    background-color: #F3F5FF;
+}
+.main h1{
+    font-weight: bold;
+    text-align: center;
+    color: #4A86FF; 
+    margin-top: 0px;
+    padding-top: 20px;
+    font-size: 3rem;
+}
+.about-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 2.5rem; /*40px*/
+    /* 전체 너비가 100vw로 설정되어서 내부 요소를 center로 정렬해주어야해요 
+        이렇게 하면 profile-card에서 margin-left를 설정할 필요가 없어요!
+    */
+    justify-content: center;
+}
+.pr{
+    /* content에서 언급했던 부분 */
+    /* padding: 200px 444px 200px 443px; */
+
+    /* 위아래 패딩은 필요해요.
+        보통 위아래 패딩은 반응형으로 잘 주지 않아요.
+        위아래 패딩이 반응형으로 설정되면 화면의 높낮이가 변할때마다 계속 바뀌기 때문에
+        보기에 불안정해보일 수 있어요..!
+        (무조건은 아닙니다. 상황에 따라서 필요할 수도 있어요!)
+        가로 패딩은 반응형으로 설정해주면 좋겠죠?
+        (이렇게 하면 화면 크기에 따라서 여백이 자동으로 조정되니까요!)
+        그러나 위에서 가운데 정렬을 해주었기 때문에 이 부분에서는 따로 가로 패딩을 설정하지 않을거에요.
+    */
+    padding: 62px 0;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.profile-card{
+    width: 380px;
+    height: 400px;
+    box-sizing: border-box;
+    border-radius:1rem;
+    background-color: #FFFFFF;
+    /* 이부분! 
+    margin-left값만 주게되면 사용자 화면마다 px값이 다르기때문에
+    사용자에 따라서 가운데에 정렬되어 보이지 않을 수 있어요ㅜ */
+    /* margin-left: 500px; */ // 삭제된 부분
+}
+.name{
+    text-align: center;
+    margin-top: 30px;
+}
+.icon{
+    margin-left: 10px;
+}
+
+.profile-img img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    
+}
+.contact-info{
+    display: block;
+    margin-left: 1.8rem; /*30px*/
+   
+}
+.contact-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 6px 0;
+
+  }
+ 
+.info-grid{ 
+    display: grid;
+    grid-template-columns: repeat(2, 200px); /*열2개, 너비 200px*/
+    gap: 90px 60px; /*세로 가로 간격*/
+}
+.info h3{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.info p{
+    text-align: left;
+    font-weight: bold;
+    margin: 4px 0;
+    color: #626682;
+}
+
+
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    
+}
+.hobby{
+    padding-top: 6.25rem; /*100px*/
+    padding-bottom: 2.5rem; /*40px*/
+}
+.hobby-card{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    margin-bottom: 100px;
+}
+
+.title{
+    width: 300px;
+    height: 50px;
+    box-sizing: border-box;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: #4A86FF;
+    color: white;
+    font-weight: bold;
+    padding-top: 15px;
+}
+.hobby-img-box{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.himage{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+  
+ 
