@@ -65,6 +65,7 @@ const ProfileItem = styled.p`
 `;
 
 const Icon = styled.span`
+  margin-right: 10px;
 `;
 
 const ProfileInfoBox = styled.div`
