@@ -1,10 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { GlobalStyle } from "./styles/globalStyles";
+import Header from "./components/Header"
+import Nav from "./components/Nav"
+import Hero from "./components/Hero"
+import About from "./components/About"
+import Hobby from "./components/Hobby"
 
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
+      <header>
+        <Header />
+      </header>
       <nav>
         <Nav />
       </nav>
