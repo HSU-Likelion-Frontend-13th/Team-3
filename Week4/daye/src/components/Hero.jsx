@@ -6,17 +6,21 @@ import styled from "styled-components";
 const HeroLayout = styled.div`
     background-color: #4A86FF;
     display: flex;
-    flex-direction: row; /*세로 방향*/
+    flex-direction: column; /*세로 방향*/
     justify-content: center;
     align-items: center;
+    padding: 4rem;
 
 `;
 
 const HeroContent = styled.p`
-    padding: 62px 0;
+    // padding: 62px 0;
     text-align: center;
     color: white;
-    font-size: 25px;
+    font-size: 2vw;
+    padding: 3rem 0;
+    font-weight: bold;
+
 `;
 
 
