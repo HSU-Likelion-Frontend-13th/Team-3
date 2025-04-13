@@ -9,7 +9,7 @@ const HeroLayout = styled.div`
     flex-direction: column; /*세로 방향*/
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    padding: 8rem;
 
 `;
 
@@ -17,7 +17,7 @@ const HeroContent = styled.p`
     text-align: center;
     color: white;
     font-size: 3vw;
-    padding: 2rem 0;
+    padding: 1rem 0;
     font-weight: bold;
 
 `;
@@ -26,9 +26,9 @@ const HeroContent = styled.p`
 export default function Hero() {
   return (
    <HeroLayout>
-    <HeroContent>안녕하세요</HeroContent>
+    <HeroContent>안녕하세요!</HeroContent>
     <HeroContent>제 이름은 김다예 입니다.</HeroContent>
-    <HeroContent>소통하는 개발자가 되고 싶어요.</HeroContent>
+    <HeroContent>소통하는 개발자가 되고 싶어요 :)</HeroContent>
    </HeroLayout>
   )
 }
