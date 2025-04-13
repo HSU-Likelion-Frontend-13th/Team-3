@@ -2,10 +2,12 @@ import React from 'react'
 import styled from "styled-components";
 import MyPhoto from "../assets/김다예.jpg"
 import Github from "../assets/github.jpg"
+
 const AboutLayout = styled.div`
 background-color: #F3F5FF;
 width: 100%;
 justify-content: center;
+
 `;
 
 const Title = styled.p`
@@ -20,7 +22,6 @@ const Profile = styled.div`
   justify-content: center;
   gap: 5vw;
   padding: 2rem;
-
 
 `;
 

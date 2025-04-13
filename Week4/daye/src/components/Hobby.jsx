@@ -60,10 +60,10 @@ const HobbyTitle = styled.div`
 `;
 
 const HobbyImage = styled.img`
-    display: block;
+    
     margin: 0 auto;
     width: 200px;
-    height: 200px;
+    height: 180px;
     border-radius: 25%;
     padding: 2rem;
     justify-content: center;
