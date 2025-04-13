@@ -5,12 +5,12 @@ import Nav from "./Nav"
 //Header 스타일 컴포넌트
 
 const HeaderLayout = styled.div`
- width: 100vw;
- height: 10vh;
- padding: 0 30vw;
- display: flex;
- justify-content: baseline;
- align-items: center;
+    width: 100vw;
+    height: 10vh;
+    padding: 0 25vw;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
 
 `;
 

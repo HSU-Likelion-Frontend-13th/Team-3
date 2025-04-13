@@ -55,14 +55,15 @@ const HobbyTitle = styled.div`
     color: white;
     font-weight: bold;
     padding-top: 15px;
+    padding-bottom: 15px;
     margin-top: 0px;
 `;
 
 const HobbyImage = styled.img`
     display: block;
     margin: 0 auto;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 25%;
     padding: 2rem;
     justify-content: center;

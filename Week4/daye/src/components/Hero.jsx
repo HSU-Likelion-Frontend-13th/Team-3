@@ -9,16 +9,15 @@ const HeroLayout = styled.div`
     flex-direction: column; /*세로 방향*/
     justify-content: center;
     align-items: center;
-    padding: 4rem;
+    padding: 3rem;
 
 `;
 
 const HeroContent = styled.p`
-    // padding: 62px 0;
     text-align: center;
     color: white;
-    font-size: 2vw;
-    padding: 3rem 0;
+    font-size: 3vw;
+    padding: 2rem 0;
     font-weight: bold;
 
 `;

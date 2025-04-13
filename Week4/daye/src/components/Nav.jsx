@@ -7,7 +7,7 @@ const NavLayout = styled.div`
     gap: 5vw;
     justify-content: baseline;
     align-items: center;
-    margin-left: 20.5vw; /*328px*/
+    margin-left: 20vw; 
     
 `;
 const NavItem = styled.p`
