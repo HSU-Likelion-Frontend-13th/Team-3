@@ -12,9 +12,9 @@ function App() {
       <header>
         <Header />
       </header>
-      <nav>
+      {/* <nav>
         <Nav />
-      </nav>
+      </nav> */}
       <section>
         <Hero />
       </section>

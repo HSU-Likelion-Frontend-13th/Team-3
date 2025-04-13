@@ -5,16 +5,17 @@ import Nav from "./Nav"
 //Header 스타일 컴포넌트
 
 const HeaderLayout = styled.div`
- width: 100vw;
- height: 10vh;
- display: flex;
- justify-content: space-between;
- align-items: center;
+    width: 100vw;
+    height: 10vh;
+    padding: 0 25vw;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
 
 `;
 
 const Logo = styled.div`
-    font-size: 1.5vw;
+    font-size: 2vw;
     font-weight: bold;
     color: #4a86ff;
     
@@ -23,8 +24,8 @@ const Logo = styled.div`
 export default function Header(){
     return (
         <HeaderLayout>
-        <Logo>PORTFOILIO</Logo>
-        <Nav />
+        <Logo>PORTFOILIO.</Logo>
+        <Nav />  {/* Nav 컴포넌트를 Header 안에서 사용 */}
         </HeaderLayout>
     );
 }
