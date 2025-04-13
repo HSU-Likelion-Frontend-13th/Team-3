@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 import MyPhoto from "../assets/김다예.jpg"
+import Github from "../assets/github.jpg"
 const AboutLayout = styled.div`
 background-color: #F3F5FF;
 width: 100%;
@@ -40,8 +41,8 @@ const ProfileImageBox = styled.span`
 const Photo = styled.img`
     display: block;
     margin: 0 auto;
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 130px;
     border-radius: 50%;
     padding: 2rem;
     
@@ -57,7 +58,7 @@ font-size: 1.5rem;
 const ProfileItem = styled.p`
   display: block;
   gap: 10px;
-  margin: 10px 0;
+  margin: 5px 0;
   font-size: 1.2em;
   padding: 1rem 0;
   text-align: left;
@@ -100,6 +101,15 @@ const InfoItem = styled.p`
     }
   }
 `;
+const GithubImg = styled.img`
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+`;
+
+const GithubLink = styled.a`
+  text-decoration: none; /* 링크 밑줄 제거 */
+  `;
 
 export default function About() {
   return (
@@ -116,14 +126,21 @@ export default function About() {
           <Icon>✉️</Icon>   
           dbk1102@naver.com</ProfileItem>
         <ProfileItem>
-          <Icon>📍</Icon>  
+          <Icon>🏠</Icon>  
           서울시 강서구 마곡동</ProfileItem>
+
+          <ProfileItem>
+          <GithubImg src = {Github} alt="github" />
+          <GithubLink href="https://github.com/Allyeeah">github</GithubLink></ProfileItem>
+
         </ProfileImageBox>
-        
+
+
         <ProfileInfoBox>
           <InfoSection>
           <InfoTitle>EDUCATION</InfoTitle>
-            <InfoItem>2021.03 ~ 2026.02 : 한성대학교 컴퓨터공학과</InfoItem>
+            <InfoItem>2021.03 ~ 2026.02 </InfoItem>
+            <InfoItem>한성대학교 컴퓨터공학과</InfoItem>
             </InfoSection>
 
             <InfoSection>
