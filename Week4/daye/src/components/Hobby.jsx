@@ -40,6 +40,8 @@ const HobbyItem = styled.div`
     border-radius: 12px;
     background-color: #FFFFFF;
     margin-bottom: 100px;
+    overflow: hidden;
+    justify-content: flex-start;
 
 `;
 
@@ -63,6 +65,8 @@ const HobbyImage = styled.img`
     height: 150px;
     border-radius: 25%;
     padding: 2rem;
+    justify-content: center;
+    
 `;
 
 
