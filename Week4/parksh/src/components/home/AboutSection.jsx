@@ -41,13 +41,13 @@ const ProfileName=styled.div`
   font-size: 2em;
   color: #4a86ff;
   margin-bottom: 0.5em;
-`
+`;
 const ProfileInfo=styled.div`
   font-size: 1.4em;
   color: #484A64;
   text-align: left;/*좌측 정렬*/
   margin-bottom: 0.5em;/*0.5em씩 띄우기*/
-`
+`;
 const InfoCard=styled.div`
    display: grid;
   /*grid 레이아웃 2행2열의 고정된 영역을 사용하므로*/
