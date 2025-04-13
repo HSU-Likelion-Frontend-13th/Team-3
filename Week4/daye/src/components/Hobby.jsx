@@ -19,6 +19,7 @@ export default function Hobby() {
   return (
     <HobbyLayout>
       <Title>HOBBY</Title>
+
     </HobbyLayout>
   )
 }
