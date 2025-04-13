@@ -2,10 +2,16 @@ import React from 'react'
 import styled from "styled-components";
 import MyPhoto from "../assets/김다예.jpg"
 import Github from "../assets/github.jpg"
+
 const AboutLayout = styled.div`
 background-color: #F3F5FF;
 width: 100%;
-justify-content: center;
+
+@media (max-width: 768px) {
+    min-width: 320px;
+    padding: 0.5rem;
+  }
+
 `;
 
 const Title = styled.p`
@@ -18,9 +24,15 @@ const Title = styled.p`
 const Profile = styled.div`
   display : flex;
   justify-content: center;
-  gap: 5vw;
+  gap: 1rem;
   padding: 2rem;
 
+   @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
 
 `;
 
@@ -34,6 +46,13 @@ const ProfileImageBox = styled.span`
     border-radius:1rem;
     background-color: #FFFFFF;
     padding: 2rem;
+    
+    
+    @media (max-width: 768px) {
+    width: 90%;
+    min-height: 350px;
+    padding: 1rem;
+  }
 
 `;
 
@@ -75,6 +94,7 @@ const ProfileInfoBox = styled.div`
  gap: 7rem;
  padding: 2rem;
 
+ 
 `;
 
 const InfoSection = styled.div`

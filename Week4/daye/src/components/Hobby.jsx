@@ -26,7 +26,7 @@ const HobbyBox = styled.div`
     align-items: flex-start;
     text-align: center;
     gap: 40px;
-    flex-wrap: wrap;
+     flex-wrap: wrap; /* 화면 작아질 때 아이템이 줄바꿈되도록 설정 */
     
 `;
 const HobbyItem = styled.div`
@@ -42,6 +42,7 @@ const HobbyItem = styled.div`
     margin-bottom: 100px;
     overflow: hidden;
     justify-content: flex-start;
+   
 
 `;
 
@@ -60,13 +61,14 @@ const HobbyTitle = styled.div`
 `;
 
 const HobbyImage = styled.img`
-    display: block;
+    
     margin: 0 auto;
     width: 200px;
-    height: 200px;
+    height: 180px;
     border-radius: 25%;
     padding: 2rem;
     justify-content: center;
+   
     
 `;
 
