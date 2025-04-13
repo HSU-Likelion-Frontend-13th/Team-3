@@ -13,18 +13,20 @@ const HeaderLayout = styled.div`
 
 const Logo = styled.div`
   font-weight: 700;
-  color: blue;
+  color: #4A86FF;
   font-size: 2em;
-  padding-left: 0.5em;
+  padding-left: 15%;
+  /*로 바꿨더니  화면을 늘리고 줄일때 화면 깜박임이 생김*/
 `;
 
 const Nav=styled.nav`
   display: flex;
   align-items: center;
+  padding-right: 2em;
   a {
     margin-left: 1.5em;
     text-decoration: none;
-    color: blue;
+    color: #000000;
     font-size: 1.2em;
     font-weight: 500;
 

@@ -11,12 +11,12 @@ function App() {
       <header>
         <Header />
       </header>
-    <div>
+    <nav>
       <IntroSection/>
       <AboutSection/>
       <HobbySection/>
 
-    </div>
+    </nav>
     </div>
   );
 }

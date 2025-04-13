@@ -6,12 +6,23 @@ import GameImg from'../../assets/home/game.jpg'
 
 const HobbyLayout=styled.div`
   display: flex;
-  justify-content: center; /* 가운데 정렬 */
-  gap: 1em; /* 카드 사이 간격 */
-  text-align: center;
-  padding:1em;
-  padding-bottom: 10em;
+  background-color: #F3F5FF;
+  flex-direction: column;
 `;
+const Title=styled.div`
+  text-align: center;
+  color: #6c82ff;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 1em 0;
+`
+const ContentWrapper=styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4em;
+  padding: 2em;
+`
 const HobbyCard=styled.div`
   background-color: white;
   text-align: center;/*가운데 정렬*/
@@ -39,18 +50,21 @@ const HobbyImg=styled.img`
 export default function HobbySection() {
   return (
     <HobbyLayout>
-      <HobbyCard>
-        <HobbyInfo>야구 보러가기</HobbyInfo>
-        <HobbyImg src={BaseballImg}alt="야구구 사진"></HobbyImg>
-      </HobbyCard>
-      <HobbyCard>
-        <HobbyInfo>f1 시청</HobbyInfo>
-        <HobbyImg src={F1Img}alt="f1 사진"></HobbyImg>
-      </HobbyCard>
-      <HobbyCard>
-        <HobbyInfo>게임</HobbyInfo>
-        <HobbyImg src={GameImg}alt="롤 사진"></HobbyImg>
-      </HobbyCard>
+      <Title>Hobby</Title>
+      <ContentWrapper>
+        <HobbyCard>
+          <HobbyInfo>야구 보러가기</HobbyInfo>
+          <HobbyImg src={BaseballImg}alt="야구구 사진"></HobbyImg>
+        </HobbyCard>
+        <HobbyCard>
+          <HobbyInfo>f1 시청</HobbyInfo>
+          <HobbyImg src={F1Img}alt="f1 사진"></HobbyImg>
+        </HobbyCard>
+        <HobbyCard>
+          <HobbyInfo>게임</HobbyInfo>
+          <HobbyImg src={GameImg}alt="롤 사진"></HobbyImg>
+        </HobbyCard>
+      </ContentWrapper>
     </HobbyLayout>
   )
 }
