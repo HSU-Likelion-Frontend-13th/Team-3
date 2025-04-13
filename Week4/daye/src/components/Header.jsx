@@ -15,7 +15,7 @@ const HeaderLayout = styled.div`
 `;
 
 const Logo = styled.div`
-    font-size: 1.5vw;
+    font-size: 2vw;
     font-weight: bold;
     color: #4a86ff;
     
@@ -24,7 +24,7 @@ const Logo = styled.div`
 export default function Header(){
     return (
         <HeaderLayout>
-        <Logo>PORTFOILIO</Logo>
+        <Logo>PORTFOILIO.</Logo>
         <Nav />  {/* Nav 컴포넌트를 Header 안에서 사용 */}
         </HeaderLayout>
     );

@@ -12,6 +12,7 @@ const NavLayout = styled.div`
 `;
 const NavItem = styled.p`
     font-weight: bold;
+    font-size: 1vw;
 
 `;
 
