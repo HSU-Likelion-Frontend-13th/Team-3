@@ -9,7 +9,7 @@ import Hobby from "./components/Hobby";
 function App() {
     return (
       <div className="App">
-        <h1>Hello</h1>
+
         <GlobalStyle />
           <Header />
             <Nav />

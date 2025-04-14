@@ -1,13 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
   body {
     font-family: 'Arial', sans-serif;
-    background-color: #fff;
+    background-color: white;
+    color: black;
   }
 
   a {
-    color: inherit;
+    text-decoration: none;
+    color: skyblue;
   }
 `;
 
