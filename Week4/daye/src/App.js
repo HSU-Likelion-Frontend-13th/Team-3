@@ -5,6 +5,7 @@ import Hero from "./components/Hero"
 import About from "./components/About"
 import Hobby from "./components/Hobby"
 
+
 function App() {
   return (
     <div className="App">
