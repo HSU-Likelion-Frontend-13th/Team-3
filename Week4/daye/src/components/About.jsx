@@ -19,7 +19,7 @@ const Title = styled.p`
  font-weight: bold;
  text-align: center;
  padding: 3rem;
- font-size: 2vw;
+ font-size: 3vw;
 `;
 const Profile = styled.div`
   display : flex;
