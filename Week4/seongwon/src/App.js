@@ -1,31 +1,21 @@
 import React from "react";
-import globalStyles from "./styles/globalStyles"
-import Header from "./components/Header"
+import GlobalStyle from "./styles/GlobalStyle";
+import Header from "./components/Header";
 import Nav from "./components/Nav";
-import Start from "./components/Nav";
-import About from "./components/Nav";
-import Hobby from "./components/Nav";
+import Start from "./components/Start";
+import About from "./components/About";
+import Hobby from "./components/Hobby";
 
 function App() {
     return (
       <div className="App">
-        <globalStyle />
-        <header>
+        <h1>Hello</h1>
+        <GlobalStyle />
           <Header />
-        </header>
-        <nav>
             <Nav />
-        </nav>
-            <section>
                 <Start />
-            </section>
-            <section>
                 <About />
-            </section>
-            <section>
                 <Hobby />
-            </section>
-    
       </div>
     );
   }
