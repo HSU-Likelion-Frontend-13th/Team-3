@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import MyPhoto from "../assets/김다예.jpg"
+import MyPhoto from "../assets/Daye.jpg"
 import Github from "../assets/github.jpg"
 
 const AboutLayout = styled.div`
@@ -131,7 +131,11 @@ const GithubLink = styled.a`
   text-decoration: none; /* 링크 밑줄 제거 */
   `;
 
-export default function About() {
+const About = () => { 
+/*export default function About() { 
+   return (
+    ...
+  );*/
   return (
     <AboutLayout>
         <Title>ABOUT</Title>
@@ -189,5 +193,6 @@ export default function About() {
     
           </Profile>
     </AboutLayout>
-  )
-}
+  );
+};
+export default About;

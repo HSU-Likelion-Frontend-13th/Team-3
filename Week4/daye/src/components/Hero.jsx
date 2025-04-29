@@ -23,12 +23,13 @@ const HeroContent = styled.p`
 `;
 
 
-export default function Hero() {
+const Hero = () => {
   return (
    <HeroLayout>
     <HeroContent>안녕하세요!</HeroContent>
     <HeroContent>제 이름은 김다예 입니다.</HeroContent>
     <HeroContent>소통하는 개발자가 되고 싶어요 :)</HeroContent>
    </HeroLayout>
-  )
-}
+  );
+};
+export default Hero;

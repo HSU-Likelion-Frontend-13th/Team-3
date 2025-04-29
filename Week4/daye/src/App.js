@@ -6,7 +6,7 @@ import About from "./components/About"
 import Hobby from "./components/Hobby"
 
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <GlobalStyle />
@@ -27,6 +27,6 @@ function App() {
       </section>
     </div>
   );
-}
+};
 
 export default App;

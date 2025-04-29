@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from "styled-components";
-import Musical from "../assets/뮤지컬.jpg"
-import Band from "../assets/밴드.jpg"
-import Shopping from "../assets/쇼핑.jpg"
+import Musical from "../assets/Musical.jpg"
+import Band from "../assets/Band.jpg"
+import Shopping from "../assets/Shopping.jpg"
 
 
 const HobbyLayout = styled.div`
@@ -74,7 +74,7 @@ const HobbyImage = styled.img`
 
 
 
-export default function Hobby() {
+const Hobby = () => {
   return (
     <HobbyLayout>
       <Title>HOBBY</Title>
@@ -94,5 +94,6 @@ export default function Hobby() {
 
       </HobbyBox>
     </HobbyLayout>
-  )
-}
+  );
+};
+export default Hobby;
