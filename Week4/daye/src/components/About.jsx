@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import MyPhoto from "../assets/김다예.jpg"
+import MyPhoto from "../assets/Daye.jpg"
 import Github from "../assets/github.jpg"
 
 const AboutLayout = styled.div`
