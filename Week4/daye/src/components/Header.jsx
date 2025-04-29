@@ -21,11 +21,12 @@ const Logo = styled.div`
     
 `;
 
-export default function Header(){
+const Header = () =>{
     return (
         <HeaderLayout>
         <Logo>PORTFOILIO.</Logo>
         <Nav />  {/* Nav 컴포넌트를 Header 안에서 사용 */}
         </HeaderLayout>
     );
-}
+};
+export default Header;

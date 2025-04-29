@@ -74,7 +74,7 @@ const HobbyImage = styled.img`
 
 
 
-export default function Hobby() {
+const Hobby = () => {
   return (
     <HobbyLayout>
       <Title>HOBBY</Title>
@@ -94,5 +94,6 @@ export default function Hobby() {
 
       </HobbyBox>
     </HobbyLayout>
-  )
-}
+  );
+};
+export default Hobby;

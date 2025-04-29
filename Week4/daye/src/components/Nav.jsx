@@ -18,7 +18,7 @@ const NavItem = styled.p`
 
 
 
-export default function Nav() {
+const Nav = () => {
   return (
    <NavLayout>
         <NavItem>ABOUT</NavItem>
@@ -26,4 +26,5 @@ export default function Nav() {
         <NavItem>HOBBY</NavItem>
    </NavLayout>
   );
-}
+};
+export default Nav;
