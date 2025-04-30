@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components';
+import colors from '../../styles/colors';
 const Intro=styled.div`
   display: flex;
   flex-direction: column; /* 수직 방향으로 정렬 */
   justify-content: center; /* 수직 가운데 정렬 */
   align-items: center;     /* 수평 가운데 정렬 */
   text-align: center; /*문자 가운데 정렬 */
-  background-color: #4A86FF;
-  color:white;
+  background-color: ${colors.mainColor};
+  color:${colors.white};
   padding-top:3em;
   padding-bottom: 3em;
   font-size:2.5em;

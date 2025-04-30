@@ -1,15 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+import colors from '../../styles/colors'
 import ProfileImg from "../../assets/home/profileImg.jpg"
 
 const AboutSectionLayout=styled.div`
   display: flex;
-  background-color: #F3F5FF;
+  background-color: ${colors.backgroundColor};
   flex-direction: column;
 `;
 const Title=styled.div`
   text-align: center;
-  color: #6c82ff;
+  color:${colors.mainColor};
   font-size: 3em;
   font-weight: bold;
   margin: 1em 0;
@@ -22,7 +23,7 @@ const ContentWrapper=styled.div`
   padding: 2em;
 `
 const ProfileCard=styled.div`
-  background-color: white;
+  background-color: ${colors.white};
   padding: 2em;
   border-radius: 1.5em;/*모서리는 둥글게*/
   text-align: center;/*가운데 정렬*/
@@ -39,12 +40,12 @@ const ProfileImage = styled.img`
 const ProfileName=styled.div`
   font-weight: bold;/*굵게*/
   font-size: 2em;
-  color: #4a86ff;
+  color: ${colors.mainColor};
   margin-bottom: 0.5em;
 `;
 const ProfileInfo=styled.div`
   font-size: 1.4em;
-  color: #484A64;
+  color: #484A64;/*한번만 사용*/
   text-align: left;/*좌측 정렬*/
   margin-bottom: 0.5em;/*0.5em씩 띄우기*/
 `;

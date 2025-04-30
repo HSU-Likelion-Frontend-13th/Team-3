@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import colors from "../../styles/colors";
 // Header 스타일 컴포넌트
 const HeaderLayout = styled.div`
   width: 100%;
@@ -13,7 +14,7 @@ const HeaderLayout = styled.div`
 
 const Logo = styled.div`
   font-weight: 700;
-  color: #4A86FF;
+  color: ${colors.mainColor};
   font-size: 2em;
   padding-left: 15%;
   /*로 바꿨더니  화면을 늘리고 줄일때 화면 깜박임이 생김*/
@@ -26,7 +27,7 @@ const Nav=styled.nav`
   a {
     margin-left: 1.5em;
     text-decoration: none;
-    color: #000000;
+    color: ${colors.black};
     font-size: 1.2em;
     font-weight: 500;
 

@@ -3,15 +3,16 @@ import styled from 'styled-components'
 import F1Img from'../../assets/home/f1.png'
 import BaseballImg from'../../assets/home/baseball.jpg'
 import GameImg from'../../assets/home/game.jpg'
+import colors from '../../styles/colors'
 
 const HobbyLayout=styled.div`
   display: flex;
-  background-color: #F3F5FF;
+  background-color: ${colors.backgroundColor};
   flex-direction: column;
 `;
 const Title=styled.div`
   text-align: center;
-  color: #6c82ff;
+  color: ${colors.mainColor};
   font-size: 3em;
   font-weight: bold;
   margin: 1em 0;
@@ -24,18 +25,18 @@ const ContentWrapper=styled.div`
   padding: 2em;
 `
 const HobbyCard=styled.div`
-  background-color: white;
+  background-color: ${colors.white};
   text-align: center;/*가운데 정렬*/
   border-radius: 3em;
   width: 20em;
   height: 23em;
 `
 const HobbyInfo=styled.div`
-  background-color: #4A86FF;
+  background-color: ${colors.mainColor};
   border-top-left-radius: 1.5em;
   border-top-right-radius: 1.5em;
   /*위쪽만 궁글게*/
-  color: white;
+  color: ${colors.white};
   font-size: 1.6em;
   font-weight: bold;
   padding: 0.8em;
