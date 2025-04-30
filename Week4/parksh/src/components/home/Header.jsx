@@ -40,17 +40,17 @@ const Nav=styled.nav`
 
 export default function Header() {
   return (
-    <HeaderLayout>
+    <HeaderLayout >
       <Logo>PORTFOLIO</Logo>
       <Nav>
-      <a href="about.html">ABOUT</a>
+      <a href="#about">ABOUT</a>{/*aboutsection 이동동*/}
       {/*a 태그를 사용하면 클릭할 때마다 새로고침이 발생해
       전체 페이지가 다시 로드되 리액트의 상태가 모두 초기화 된다.
       반면 Link를 사용하면 새로고침 되지 않는다.
       때문에 a태그는 보통 외부 링크를 처리하는데 사용되고
       Link 태그는 내부 페이지 간 이동에 사용된다.*/}
-      <a href="HOBBY.html">HOBBY</a>
-      <a href="homework.html">CONTACT</a>
+      <a href="#hobby">HOBBY</a>{/*hobbysection 이동*/}
+      <a href="/">CONTACT</a>{/*홈으로 돌아가기*/}
       </Nav>
     </HeaderLayout>
   );

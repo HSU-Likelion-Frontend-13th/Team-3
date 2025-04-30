@@ -73,7 +73,7 @@ const InfoBlock = styled.div`
 
 export default function AboutSection() {
   return (
-   <AboutSectionLayout>
+   <AboutSectionLayout id="about">
     <Title>About</Title>
       <ContentWrapper>
       <ProfileCard>

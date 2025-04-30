@@ -50,12 +50,12 @@ const HobbyImg=styled.img`
 `
 export default function HobbySection() {
   return (
-    <HobbyLayout>
+    <HobbyLayout id="hobby">
       <Title>Hobby</Title>
       <ContentWrapper>
         <HobbyCard>
           <HobbyInfo>야구 보러가기</HobbyInfo>
-          <HobbyImg src={BaseballImg}alt="야구구 사진"></HobbyImg>
+          <HobbyImg src={BaseballImg}alt="야구 사진"></HobbyImg>
         </HobbyCard>
         <HobbyCard>
           <HobbyInfo>f1 시청</HobbyInfo>
