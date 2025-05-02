@@ -27,7 +27,10 @@ export default function TodoItem({ todoText, todolist, setTodolist }) {
         </S.CheckboxImgContainer>
         <S.TodoText>{todoText}</S.TodoText>
       </S.CheckboxAndTodoText>
+      <S.DMButtonContainer>
       <S.DeleteButton onClick={deleteTodo}>삭제</S.DeleteButton>
+      <S.ModifyButton>수정</S.ModifyButton>
+      </S.DMButtonContainer>
     </S.TodoItemLayout>
   );
 }

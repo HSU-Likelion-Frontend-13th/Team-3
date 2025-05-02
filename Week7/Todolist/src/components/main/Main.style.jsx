@@ -83,6 +83,16 @@ export const DeleteButton = styled.button`
   border: 1px solid grey;
 `;
 
+export const ModifyButton = styled.button`
+  width: 50px;
+  border: 1px solid grey;
+  `;
+
+export const DMButtonContainer = styled.div`
+  display: flex;
+  gap: 8px;
+`;
+
 export const DeleteImg = styled.img``;
 
 export const CommentlistWrapper = styled.div`
