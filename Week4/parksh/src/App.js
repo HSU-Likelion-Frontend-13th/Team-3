@@ -15,7 +15,6 @@ function App() {
       <IntroSection/>
       <AboutSection/>
       <HobbySection/>
-
     </nav>
     </div>
   );

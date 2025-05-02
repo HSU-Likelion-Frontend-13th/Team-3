@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+
+    <title>숫자 맞히기 게임</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+      
+      .form input[type="number"] {
+        width: 200px;
+      }
+
+      .lastResult {
+        /* color: rgb(0, 0, 0);*/
+        padding: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>숫자 맞히기 게임</h1>
+
+    <p>1에서 100 사이의 무작위 숫자를 선택합니다. 10턴 이내에 맞출 수 있는지 확인해 보세요. 선택한 숫자가 너무 높았는지 너무 낮았는지 알려드리겠습니다.</p>
+
+    <div class="form">
+      <label for="guessField">예측한 숫자: </label>
+      <input type="number" min="1" max="100" required id="guessField" class="guessField">
+      <input type="submit" value="예측한 숫자 제출하기" class="guessSubmit">
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p> 
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+        const guessInput = document.querySelector('.guessField');
+        const guessBtn = document.querySelector('.guessSubmit');
+        const resultParas = document.querySelector('.resultParas');
+        const guesses = document.querySelector('.guesses');
+        const lastResult = document.querySelector('.lastResult');
+        const lowOrHi = document.querySelector('.lowOrHi');
+
+        let numbers = [];
+        let answer;
+        let firstGuess = true;
+        let guessCount = 1;
+
+          //랜덤 함수 
+          function randomNumber(){
+           for(let i = 0; i<10; i++){
+            let rand = Math.floor(Math.random() * 100) + 1;
+            numbers.push(rand); //numbers 배열에 랜덤 숫자 넣음
+           }
+          answer = Math.floor(Math.random()*100+1);
+
+        }
+
+        function checkNumber(value){ // value 전달 받아야함
+            if(Number(value) === answer){
+                lastResult.textContent = "축하합니다! 맞췄습니다!";
+                lastResult.style.backgroundColor = 'green';
+                lastResult.style.color = 'white';
+                lowOrHi.textContent = ""; // 정답이면 밑에 비교 문장 필요X
+           
+                resetGame();
+               
+            }
+            else{
+                if(guessCount >= 10){
+                lastResult.textContent = "게임 오버";
+                lastResult.style.backgroundColor = 'black';
+                lastResult.style.color = 'white';
+                lowOrHi.textContent = "";
+                
+                guessInput.disabled = true; //guessInput 비활성화
+                guessBtn.disabled = true; //guessBtn 비활성화
+
+                resetGame();
+                
+                return;
+             }
+
+
+                // 아직 시도 남아있을 때
+                lastResult.textContent = "틀렸습니다!";
+                lastResult.style.backgroundColor = 'red';
+
+                if(Number(value) > answer){
+                    lowOrHi.textContent = "예측한 값이 큽니다!";
+                }
+                else{
+                    lowOrHi.textContent = "예측한 값이 작습니다!";
+                }
+            }
+        }
+
+        function resetGame(){
+
+           //새 게임 버튼 생성
+           const restartBtn = document.createElement('button');
+                restartBtn.textContent= "새 게임 시작하기";
+                lowOrHi.appendChild(restartBtn);
+
+                restartBtn.addEventListener('click', ()=>{
+                  restartBtn.remove();  
+
+           //랜덤 숫자 새로 만들기
+           numbers = []; //기존 배열 초기화
+           randomNumber();
+
+           firstGuess = true;
+           guessCount = 1; // 시도 기회
+
+           // 게임 상태 초기화
+           guessInput.value = ''; //입력창 초기화
+           guessInput.focus(); // 포커스 이동
+           guessInput.disabled = false; //guessInput 활성화
+           guessBtn.disabled = false; //guessBtn 활성화화
+          
+           // 출력 초기화
+           guesses.textContent = '';
+           lastResult.textContent = '';
+           lastResult.style.backgroundColor = 'white';
+           lastResult.style.color = 'black';
+
+          });
+        }
+
+        guessBtn.addEventListener('click', ()=>{
+            const value = guessInput.value; 
+            /*input해서 입력한 값을 가져오면 
+            그 값은 무조건 문자열 형태*/
+            if(!value) return;
+
+            if(FirstGuess){ //예측한 숫자들-> 한번만 출력하기 위해
+                const label = document.createElement("span");
+                label.textContent = "예측한 숫자들: ";
+                guesses.appendChild(label);
+                RandomNumber(); // 랜덤으로 지정한 한 숫자 한번만 생성
+                FirstGuess = false;
+            }
+
+            const num = document.createElement("span"); //예측한 숫자들
+            num.className = 'guess-num';
+            num.textContent = value + ' '; // 숫자 출력할 때 한칸 띄우기
+            guesses.appendChild(num);
+            
+           checkNumber(Number(value)); // 예측한 숫자가 맞는지 틀리는지 확인하는 함수
+           // Number(value) -> input해서 입력한 값은 문자열이기 때문에 숫자로 변환
+            guessCount++;
+    
+        })
+    
+       
+
+   
+      
+        
+        
+
+    </script>
+  </body>
+</html>

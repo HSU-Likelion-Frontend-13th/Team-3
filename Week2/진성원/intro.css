@@ -1,0 +1,109 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+
+header h1{
+    color: skyblue;
+}
+
+nav a{
+    color: black;
+    text-decoration: none; /* 위에 선택바 밑줄 제거*/
+    font-weight: bold; /*글씨 진하게 만들기*/
+    margin-left: 32px; /* 선택바 서로 간격 조절*/
+}
+
+.start{
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+    padding: 100px;
+    font-size: 1rem;
+}
+
+.about-title{
+    text-align: center;
+    color: skyblue;
+
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 32px;
+    justify-content: center;
+}
+
+.profile{
+    text-align: center;
+}
+
+.profile img{
+    width:144px;
+    height:270px;
+    border-radius: 50%; /*프로필사진 동그렇게 만들기*/
+
+}
+
+.profile h2{
+    color:skyblue;
+}
+
+.information{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   column-gap: 56px;
+}
+
+.information h3{
+    font-weight: bold;
+}
+
+.hobby-title{
+    text-align: center;
+    color:skyblue;
+    font-size: 1.7rem;
+
+}
+
+.hobby-list{
+    display: flex;
+    grid-template-columns: repeat(3,1fr); /*가로로 3개 나열*/
+    gap:0;
+    padding: 0;
+    justify-items: center;
+    justify-content: center;
+   
+
+}
+
+.hobby-item{
+    width: 180px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hobby-item img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.hobby-item p {
+    background-color: skyblue;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 0;
+    margin: 0;
+
+}
+

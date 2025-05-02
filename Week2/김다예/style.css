@@ -1,0 +1,176 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100vw; /*전체 너비를 100vw로 두면 나머지 요소들의 너비를 맞추기 쉬워짐!*/
+}
+.top{
+    display: flex;
+    flex-direction: row; /*행 가로 방향*/
+    align-items: baseline; /*글자 기준선 맞춰서 정렬*/
+    /* margin-left: 370px;
+    margin-right: 1210px; */
+    /*top 내부 요소의 여백 => padding이 적합*/
+    padding: 0 20vw; /*padding: 위아래 좌우;*/
+    color: #4A86FF;
+}
+.nav{
+    margin-left: 20.5rem; /*328px*/
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    color: black;
+    gap: 32px;
+}
+.nav h3{
+    margin-left: 32px;
+}
+
+.content{
+    background-color: #4A86FF;
+    display: flex;
+    flex-direction: row; /*행 - 가로줄*/
+    justify-content: center;
+    align-items: center;
+    /*여기에 가운데 정렬 요소를 두면 pr에서 패딩을
+    세부적으로 설정할 필요X */
+}
+.pr{
+    padding: 62px 0;/*위아래 좌우*/
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+.main{
+    background-color: #F3F5FF;
+    
+}
+.main h1{
+    font-weight: bold;
+    text-align: center;
+    color: #4A86FF; 
+    margin-top: 0px;
+    padding-top: 20px;
+    font-size: 3rem;
+}
+.about-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 2.5rem; /*40px*/
+    justify-content: center; /*전체 너비가 100vw로 설정되어서 
+    내부 요소 center로 정렬해줘야함
+    => profile-card에서 margin-left 설정할 필요X */
+}
+
+.profile-card{
+    width: 380px;
+    height: 400px;
+    box-sizing: border-box;
+    border-radius:1rem;
+    background-color: #FFFFFF;
+    /*margin-left: 500px; margin-left 값만 주면 
+    사용자 화면마다 px값이 달라 가운데 정렬 안될수 있음*/
+   
+}
+.name{
+    text-align: center;
+    margin-top: 30px;
+}
+.icon{
+    margin-left: 10px;
+}
+
+.profile-img img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    
+}
+.contact-info{
+    display: block;
+    margin-left: 1.8rem; /*30px*/
+   
+}
+.contact-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 6px 0;
+
+  }
+ 
+.info-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 200px); /*열2개, 너비 200px*/
+    gap: 90px 60px; /*세로 가로 간격*/
+}
+.info h3{
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.info p{
+    text-align: left;
+    font-weight: bold;
+    margin: 4px 0;
+    color: #626682;
+}
+
+
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    
+}
+.hobby{
+    padding-top: 6.25rem; /*100px*/
+    padding-bottom: 2.5rem; /*40px*/
+}
+.hobby-card{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    margin-bottom: 100px;
+}
+
+.title{
+    width: 300px;
+    height: 50px;
+    box-sizing: border-box;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: #4A86FF;
+    color: white;
+    font-weight: bold;
+    padding-top: 15px;
+}
+.hobby-img-box{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.himage{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+  
+ 
