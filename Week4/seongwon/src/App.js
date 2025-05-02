@@ -2,7 +2,7 @@ import React from "react";
 import GlobalStyle from "./styles/GlobalStyle";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
-import Start from "./components/Start";
+import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import Hobby from "./components/Hobby";
 
@@ -12,8 +12,8 @@ function App() {
 
         <GlobalStyle />
           <Header />
-            <Nav />
-                <Start />
+            
+                <HeroSection />
                 <About />
                 <Hobby />
       </div>

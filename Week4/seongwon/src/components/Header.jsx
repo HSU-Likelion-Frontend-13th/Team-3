@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Nav from "./Nav";
 
 const HeaderLayout = styled.header`
   display: flex;
@@ -16,6 +17,7 @@ export default function Header() {
   return (
     <HeaderLayout>
       <Title>PORTFOLIO.</Title>
+      <Nav />
     </HeaderLayout>
   );
 }

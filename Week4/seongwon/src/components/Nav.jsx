@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const NavWrapper = styled.nav`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 32px;
-  padding: 16px;
+  padding: 20px;
   background-color: white;
 `;
 

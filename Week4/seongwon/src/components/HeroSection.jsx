@@ -9,7 +9,7 @@ const StartLayout = styled.div`
   font-size: 1.5rem;
 `;
 
-export default function Start() {
+export default function HeroSection() {
   return (
     <StartLayout>
       <h2>
