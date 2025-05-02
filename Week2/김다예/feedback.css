@@ -93,7 +93,7 @@ body{
     /* 이부분! 
     margin-left값만 주게되면 사용자 화면마다 px값이 다르기때문에
     사용자에 따라서 가운데에 정렬되어 보이지 않을 수 있어요ㅜ */
-    /* margin-left: 500px; */ // 삭제된 부분
+    /* margin-left: 500px; */ 
 }
 .name{
     text-align: center;
