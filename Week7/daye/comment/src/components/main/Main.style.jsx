@@ -6,18 +6,18 @@ export const SectionTitle = styled.div`
 `;
 
 /* TodoComment */
-export const TodoListLayout = styled.div`
+export const CommentListLayout = styled.div`
   width: 60vw;
 `;
 
-export const AddTodoWrapper = styled.div`
+export const AddCommentWrapper = styled.div`
   display: flex;
   gap: 0.5rem;
   justify-content: center;
   align-items: center;
 `;
 
-export const TodoListWrapper = styled.div`
+export const CommentListWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -39,12 +39,13 @@ export const InputLayout = styled.div`
 export const InputContainer = styled.input`
   width: 100%;
   height: 100%;
+  line-height: 1.5rem;
+  padding: 0.5rem;
 `;
 
 export const ButtonLayout = styled.button`
   width: 100px;
   height: 3rem;
-
   text-align: center;
   background-color: #5664f5;
 `;
@@ -57,13 +58,14 @@ export const ButtonContainer = styled.div`
   color: white;
 `;
 
-export const TodoItemLayout = styled.div`
+export const CommentItemLayout = styled.div`
   width: 80%;
   height: 3.8rem;
   border: 1px solid gray;
   display: flex;
   justify-content: space-between;
   padding: 0.6rem;
+  
 `;
 
 export const CheckboxAndTodoText = styled.div`
@@ -79,13 +81,21 @@ export const TodoText = styled.div``;
 
 export const DeleteButton = styled.button`
   width: 50px;
-
+  height: 30px;
   border: 1px solid grey;
 `;
 
 export const ModifyButton = styled.button`
   width: 60px;
+  height: 30px;
   border: 1px solid grey;
+  `;
+
+export const LikeButton = styled.button`
+  width: 50px;
+  border: 1px solid grey;
+`;
+export const like = styled.span`
   `;
 
 export const DMButtonContainer = styled.div`
@@ -103,7 +113,7 @@ export const CommentlistWrapper = styled.div`
   gap: 0.6rem;
 `;
 
-export const CommentItemLayout = styled.div`
+export const CommentItemLayoutAlt = styled.div`
   width: 85%;
   height: 4rem;
   border: 1px solid gray;
@@ -111,9 +121,16 @@ export const CommentItemLayout = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0.6rem;
+  max-height: 10rem;
+  overflow: auto; /*스크롤 기능*/
+  word-wrap: break-word; /* 긴 단어를 줄바꿈 */
 `;
 
-export const CommentText = styled.div``;
+export const CommentText = styled.div`
+  flex: 1;
+  word-wrap: break-word;
+  word-break: break-word;
+`;
 
 export const DateText = styled.div``;
 
