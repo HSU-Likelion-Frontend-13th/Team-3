@@ -6,18 +6,18 @@ export const SectionTitle = styled.div`
 `;
 
 /* TodoComment */
-export const TodoListLayout = styled.div`
+export const CommentListLayout = styled.div`
   width: 60vw;
 `;
 
-export const AddTodoWrapper = styled.div`
+export const AddCommentWrapper = styled.div`
   display: flex;
   gap: 0.5rem;
   justify-content: center;
   align-items: center;
 `;
 
-export const TodoListWrapper = styled.div`
+export const CommentListWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@ export const ButtonContainer = styled.div`
   color: white;
 `;
 
-export const TodoItemLayout = styled.div`
+export const CommentItemLayout = styled.div`
   width: 80%;
   height: 3.8rem;
   border: 1px solid gray;
@@ -103,7 +103,7 @@ export const CommentlistWrapper = styled.div`
   gap: 0.6rem;
 `;
 
-export const CommentItemLayout = styled.div`
+export const CommentItemLayoutAlt = styled.div`
   width: 85%;
   height: 4rem;
   border: 1px solid gray;

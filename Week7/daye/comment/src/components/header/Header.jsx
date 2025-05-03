@@ -2,7 +2,6 @@ import * as S from "./Header.style";
 import React from "react";
 import CHECK from "../../assets/check.png";
 
-
 const Header = () => {
   return (
     <S.HeaderLayout>
@@ -13,4 +12,5 @@ const Header = () => {
 };
 
 export default Header
+
 
