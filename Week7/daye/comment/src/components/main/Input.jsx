@@ -8,6 +8,7 @@ export default function Input({ inputText, setInputText }) {
         type="text"
         value={inputText}
         onChange={(e) => setInputText(e.target.value)}
+        placeholder="댓글을 작성해주세요."
       ></S.InputContainer>
     </S.InputLayout>
   );

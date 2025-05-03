@@ -1,11 +1,16 @@
 import * as S from "./Header.style";
+import React from "react";
 import CHECK from "../../assets/check.png";
 
-export default function Header() {
+
+const Header = () => {
   return (
     <S.HeaderLayout>
       <S.CheckIcon src={CHECK} />
-      <S.Title>TodoList</S.Title>
+      <S.Title>Comment</S.Title>
     </S.HeaderLayout>
-  );
-}
+  )
+};
+
+export default Header
+
