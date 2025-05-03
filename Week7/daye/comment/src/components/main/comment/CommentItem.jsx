@@ -47,8 +47,10 @@ export default function CommentItem({ commentText, commentlist, setCommentlist }
         <S.ModifyButton onClick={modifyComplete}>수정완료</S.ModifyButton>) : 
         (<S.ModifyButton onClick={modifyComment}>수정</S.ModifyButton>)
       }
-      <S.LikeButton onClick={likeComment}>👍</S.LikeButton>
-      <p>{like}</p>
+      <S.LikeButton onClick={likeComment}>👍
+      <S.like>{like}</S.like>
+      </S.LikeButton>
+      
       
       </S.DMButtonContainer>
     </S.CommentItemLayoutAlt>

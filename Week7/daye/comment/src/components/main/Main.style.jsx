@@ -79,19 +79,22 @@ export const TodoText = styled.div``;
 
 export const DeleteButton = styled.button`
   width: 50px;
-
+  height: 30px;
   border: 1px solid grey;
 `;
 
 export const ModifyButton = styled.button`
   width: 60px;
+  height: 30px;
   border: 1px solid grey;
   `;
 
 export const LikeButton = styled.button`
-  widdth: 20px;
+  width: 50px;
   border: 1px solid grey;
 `;
+export const like = styled.span`
+  `;
 
 export const DMButtonContainer = styled.div`
   display: flex;
