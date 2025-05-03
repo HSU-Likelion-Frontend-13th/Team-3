@@ -88,6 +88,11 @@ export const ModifyButton = styled.button`
   border: 1px solid grey;
   `;
 
+export const LikeButton = styled.button`
+  widdth: 20px;
+  border: 1px solid grey;
+`;
+
 export const DMButtonContainer = styled.div`
   display: flex;
   gap: 8px;
