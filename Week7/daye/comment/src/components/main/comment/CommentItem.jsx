@@ -50,8 +50,6 @@ export default function CommentItem({ commentText, commentlist, setCommentlist }
       <S.LikeButton onClick={likeComment}>👍
       <S.like>{like}</S.like>
       </S.LikeButton>
-      
-      
       </S.DMButtonContainer>
     </S.CommentItemLayoutAlt>
   );

@@ -39,12 +39,13 @@ export const InputLayout = styled.div`
 export const InputContainer = styled.input`
   width: 100%;
   height: 100%;
+  line-height: 1.5rem;
+  padding: 0.5rem;
 `;
 
 export const ButtonLayout = styled.button`
   width: 100px;
   height: 3rem;
-
   text-align: center;
   background-color: #5664f5;
 `;
@@ -64,6 +65,7 @@ export const CommentItemLayout = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0.6rem;
+  
 `;
 
 export const CheckboxAndTodoText = styled.div`
@@ -119,9 +121,16 @@ export const CommentItemLayoutAlt = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0.6rem;
+  max-height: 10rem;
+  overflow: auto; /*스크롤 기능*/
+  word-wrap: break-word; /* 긴 단어를 줄바꿈 */
 `;
 
-export const CommentText = styled.div``;
+export const CommentText = styled.div`
+  flex: 1;
+  word-wrap: break-word;
+  word-break: break-word;
+`;
 
 export const DateText = styled.div``;
 
