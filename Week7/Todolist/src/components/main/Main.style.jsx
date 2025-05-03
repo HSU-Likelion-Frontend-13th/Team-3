@@ -84,7 +84,7 @@ export const DeleteButton = styled.button`
 `;
 
 export const ModifyButton = styled.button`
-  width: 50px;
+  width: 60px;
   border: 1px solid grey;
   `;
 
