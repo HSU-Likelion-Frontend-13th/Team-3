@@ -32,12 +32,6 @@ export default function TodoItem({ todoText, todolist, setTodolist }) {
   return (
     <S.TodoItemLayout>
       <S.CheckboxAndTodoText>
-        <S.CheckboxImgContainer onClick={completeTodo}>
-          <S.CheckboxImg
-            src={isChecked ? CHECKBOXBLUE : CHECKBOX}
-            alt="체크박스"
-          />
-        </S.CheckboxImgContainer>
         {isEditing ? (
           <input
           type="text"

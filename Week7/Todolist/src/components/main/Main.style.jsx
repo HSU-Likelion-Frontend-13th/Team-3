@@ -58,8 +58,8 @@ export const ButtonContainer = styled.div`
 `;
 
 export const TodoItemLayout = styled.div`
-  width: 70%;
-  height: 2.8rem;
+  width: 80%;
+  height: 3.8rem;
   border: 1px solid gray;
   display: flex;
   justify-content: space-between;
