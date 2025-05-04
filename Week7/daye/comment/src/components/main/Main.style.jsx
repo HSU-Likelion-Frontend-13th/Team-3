@@ -90,6 +90,37 @@ export const ModifyButton = styled.button`
   height: 30px;
   border: 1px solid grey;
   `;
+  export const ReplyInputContainer = styled.div`
+  width: 50%;
+  height: 3rem;
+  border: 1px solid gray;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  `;
+
+  export const ReplyButton = styled.button`
+  margin-left: auto; /* 버튼을 오른쪽으로 정렬 */
+  width: 50px;
+  height: 30px;
+  border: 1px solid grey;
+  margin-right: 0.5rem; /* 오른쪽 여백 추가 */
+`;
+export const ReplyInput = styled.input`
+  width: 50%;
+  height: 100%;
+  line-height: 1.5rem;
+  padding: 0.5rem;
+  `;
+
+export const Reply = styled.div`
+  margin-left: 1rem;
+  padding: 0.5rem;
+  border-left: 2px solid gray;
+  font-size: 0.9rem;
+  color: #333;
+ 
+`;
 
 export const LikeButton = styled.button`
   width: 50px;
