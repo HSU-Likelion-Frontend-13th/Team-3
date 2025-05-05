@@ -31,10 +31,10 @@ export default function CommentItem({ commentText, commentlist, setCommentlist})
     setLike(like+1); // 좋아요 수 증가
   };
 
-   // 대댓글 작성 상태 변경 함수
-   const commentReply = () =>{
-    setIsReply(true); // 대댓글 작성 상태로 변경
-  };
+  //  // 대댓글 작성 상태 변경 함수
+  //  const commentReply = () =>{
+  //   setIsReply(true); // 대댓글 작성 상태로 변경
+  // };
 
   // 대댓글 추가 함수
         const addReply = () => {
