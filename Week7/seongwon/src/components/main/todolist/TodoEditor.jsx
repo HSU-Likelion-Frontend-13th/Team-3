@@ -7,7 +7,7 @@ export default function TodoEditor({ inputText, setInputText, addTodo }) {
   return (
     <S.AddTodoWrapper>
       <Input inputText={inputText} setInputText={setInputText} />
-      <Button text={"+ 추가하기"} addTodo={addTodo}></Button>
+      <Button text={"댓글 작성하기"} addTodo={addTodo}></Button>
     </S.AddTodoWrapper>
   );
 }
