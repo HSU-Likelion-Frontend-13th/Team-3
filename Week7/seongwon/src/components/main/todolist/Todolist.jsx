@@ -20,7 +20,7 @@ export default function Todolist() {
 
   return (
     <S.TodoListLayout>
-      <S.SectionTitle>📝 My TodoList</S.SectionTitle>
+      <S.SectionTitle>✍️ 댓글 작성</S.SectionTitle>
       <TodoEditor
         inputText={inputText}
         setInputText={setInputText}
