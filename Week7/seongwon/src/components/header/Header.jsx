@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <S.HeaderLayout>
       <S.CheckIcon src={CHECK} />
-      <S.Title>TodoList</S.Title>
+      <S.Title>Comment</S.Title>
     </S.HeaderLayout>
   );
 }
