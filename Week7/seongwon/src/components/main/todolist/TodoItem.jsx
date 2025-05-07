@@ -9,6 +9,9 @@ export default function TodoItem({ todoText, todolist, setTodolist }) {
     setTodolist(todolist.filter((todo) => todo !== todoText));
   };
 
+  const fixTodo=()=>{
+    setTodolist(todolist.filter((todo)=>todo!==todoText));
+  };
  
 
   return (
@@ -17,6 +20,7 @@ export default function TodoItem({ todoText, todolist, setTodolist }) {
         <S.TodoText>{todoText}</S.TodoText>
       </S.CheckboxAndTodoText>
       <S.DeleteButton onClick={deleteTodo}>삭제</S.DeleteButton>
+      <S.FixButton onClick={fixTodo}>수정</S.FixButton>
     </S.TodoItemLayout>
   );
 }

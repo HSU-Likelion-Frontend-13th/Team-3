@@ -66,14 +66,6 @@ export const TodoItemLayout = styled.div`
   padding: 0.6rem;
 `;
 
-export const CheckboxAndTodoText = styled.div`
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-`;
-
-export const CheckboxImgContainer = styled.button``;
-export const CheckboxImg = styled.img``;
 
 export const TodoText = styled.div``;
 
