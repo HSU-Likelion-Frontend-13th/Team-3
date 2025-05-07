@@ -14,9 +14,7 @@ export default function Todolist() {
     setInputText(""); // 입력창 초기화
   };
 
-  useEffect(() => {
-    console.log("할일: " + todolist);
-  }, [todolist]);
+ 
 
   return (
     <S.TodoListLayout>
