@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import * as S from "../Main.style";
 
 export default function TodoItem({ todoText, todolist, setTodolist }) {
- 
+
   const deleteTodo = () => {
     setTodolist(todolist.filter((todo) => todo !== todoText));
   };
 
   const fixTodo=()=>{
-    setTodolist(todolist.filter((todo)=>todo!==todoText));
+    console.log("클릭됌");
   };
  
 
@@ -20,7 +20,7 @@ export default function TodoItem({ todoText, todolist, setTodolist }) {
         <S.TodoText>{todoText}</S.TodoText>
       </S.CheckboxAndTodoText>
       <S.DeleteButton onClick={deleteTodo}>삭제</S.DeleteButton>
-      <S.FixButton onClick={fixTodo}>수정</S.FixButton>
+      <S.EditButton onClick={fixTodo}>수정</S.EditButton>
     </S.TodoItemLayout>
   );
 }
