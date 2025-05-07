@@ -10,6 +10,4 @@ export const HeaderLayout = styled.div`
   gap: 0.5rem;
 `;
 
-export const CheckIcon = styled.img``;
-
 export const Title = styled.h3``;

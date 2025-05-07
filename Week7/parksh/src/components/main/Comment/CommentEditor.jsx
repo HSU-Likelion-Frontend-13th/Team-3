@@ -9,9 +9,9 @@ export default function CommentEditor({ inputText, setInputText, addComment }) {
       <Input 
         inputText={inputText}
         setInputText={setInputText}
-        addTodo={addComment} // Input 내부가 addTodo를 기대한다면 유지
+        addComment={addComment} // Input 내부가 addTodo를 기대한다면 유지
       />
-      <Button text={"+ 추가하기"} addTodo={addComment}></Button>
+      <Button text={"+ 추가하기"} addComment={addComment}></Button>
     </S.AddCommentWrapper>
   );
 }

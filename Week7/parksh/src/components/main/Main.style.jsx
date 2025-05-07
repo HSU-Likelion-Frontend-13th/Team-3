@@ -119,8 +119,16 @@ export const CheckboxImg = styled.img`
   height: 20px;
 `;
 
+export const ModifyButton=styled.button`
+  width: 50px;
+  border: 1px solid grey; 
+`;
 
-// 🟡 필요 없을 수 있는 Todo 전용 스타일
-// export const TodoItemLayout = ...
-// export const CheckboxAndTodoText = ...
-// export const TodoText = ...
+export const AddButtonLayout=styled.button`
+width: 100px;
+height: 3rem;
+text-align: center;
+display: flex;          
+gap: 0.3rem;            
+align-items: center;    
+`;

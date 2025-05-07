@@ -17,9 +17,6 @@ export default function Comment() {
     console.log("할일 : " + commentList);
   }, [commentList]);
 
-  //const addModifyButton = () => {
-    // (예정) 댓글 수정 버튼 추가 기능
-  //};
 
   return (
     <S.CommentLayout>
@@ -32,11 +29,13 @@ export default function Comment() {
       <S.CommentWrapper>
         {commentList.map((comment, index) => (
           <CommentItem
-            key={index}
-            commentText={comment}
-            commentList={commentList}
-            setCommentList={setCommentList}
-          />
+          key={index}
+          index={index}//list의 몇번째 요소인지 보기
+          commentText={comment}//원래 텍스트
+          inputText={inputText}//현재 입력중인 텍스트
+          commentList={commentList}//모든 댓글 목록
+          setCommentList={setCommentList}//댓글 목록 업데이트 하는 함수수
+        />
         ))}
       </S.CommentWrapper>
     </S.CommentLayout>
