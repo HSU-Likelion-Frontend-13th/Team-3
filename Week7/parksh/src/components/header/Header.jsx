@@ -1,11 +1,13 @@
 import * as S from "./Header.style";
-import CHECK from "../../assets/check.png";
 
 export default function Header() {
   return (
     <S.HeaderLayout>
-      <S.CheckIcon src={CHECK} />
-      <S.Title>TodoList</S.Title>
+      <S.Title> 
+        멋쟁이 사자처럼 7주차 과제
+        <br/><br/>
+        💬 댓글 달기
+      </S.Title>
     </S.HeaderLayout>
   );
-}
+} 
