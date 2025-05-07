@@ -14,7 +14,13 @@ export default function TodoItem({ todoText, todolist, setTodolist }) {
   };
 
   const fixTodo=()=>{
-    setIsEditing(true); //눌리면 수정 중으로 변경됌됌
+    if(isEditing){
+    setTodolist(todolist.map((todo)=>todo===todoText?editText:todo));
+    setIsEditing(false);
+
+    }else{
+      setIsEditing(true);
+      setEditText(todoText);}
   };
  
 
@@ -33,7 +39,7 @@ export default function TodoItem({ todoText, todolist, setTodolist }) {
         )}
       </S.CheckboxAndTodoText>
       <S.DeleteButton onClick={deleteTodo}>삭제</S.DeleteButton>
-      <S.EditButton onClick={fixTodo}>수정</S.EditButton>
+      <S.EditButton onClick={fixTodo}>{isEditing ? "수정완료" :"수정"}</S.EditButton>
     </S.TodoItemLayout>
   );
 }
