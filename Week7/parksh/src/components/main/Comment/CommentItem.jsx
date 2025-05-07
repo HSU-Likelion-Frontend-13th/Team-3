@@ -40,7 +40,7 @@ export default function CommentItem({
       </S.CheckboxAndTodoText>
       <S.AddButtonLayout>
         <S.DeleteButton onClick={deleteComment}>삭제</S.DeleteButton>
-        <S.ModifyButton onClick={modifyComment}> {isEditing ? "수정중중" : "수정"}</S.ModifyButton>
+        <S.ModifyButton onClick={modifyComment}> {isEditing ? "수정중" : "수정"}</S.ModifyButton>
       </S.AddButtonLayout>
     </S.CommentItemLayout>
   );
