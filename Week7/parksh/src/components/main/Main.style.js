@@ -51,7 +51,7 @@ export const CommentItemLayout = styled.div`
 export const CommentText = styled.div``;
 export const DateText = styled.div``;
 
-// ✅ 입력창
+// 입력창
 export const InputLayout = styled.div`
   width: 100%;
   height: 3rem;
@@ -69,7 +69,7 @@ export const EditInput = styled.input`
   height: 100%;
 `;
 
-// ✅ 버튼
+// 버튼
 export const ButtonLayout = styled.button`
   width: 100px;
   height: 3rem;
